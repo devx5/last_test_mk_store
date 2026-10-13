@@ -63,9 +63,9 @@ const [showNavbar, setShowNavbar] = useState(true);
             {/* Desktop Navigation Links */}
             <nav className="hidden xl:flex items-center space-x-6 space-x-reverse text-sm font-medium text-gray-700">
               <Link to="/" className="hover:text-blue-600 transition">الرئيسية</Link>
-              <Link to="/about" className="hover:text-blue-600 transition">من نحن</Link>
               <a href="#" className="hover:text-blue-600 transition">قائمة الشركات</a>
               <Link to="/all-products" className="hover:text-blue-600 transition">كل المنتجات</Link>
+              
              <div className="relative group cursor-pointer">
   <div className="flex items-center gap-1 hover:text-blue-600 transition">
     <span>الأقسام</span>
@@ -83,7 +83,8 @@ const [showNavbar, setShowNavbar] = useState(true);
     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المستلزمات والمكملات</a>
   </div>
 </div>
-              <a href="#" className="hover:text-blue-600 transition">سياسة الاستبدال والاسترجاع</a>
+<Link to="/about" className="hover:text-blue-600 transition">من نحن</Link>
+              <Link to="/returnpolicy" className="hover:text-blue-600 transition">سياسة الاستبدال والاسترجاع</Link>
               <Link to="/contact" className="hover:text-blue-600 transition mr-3">اتصل بنا</Link>
             </nav>
 
@@ -167,9 +168,9 @@ const [showNavbar, setShowNavbar] = useState(true);
         {isMobileMenuOpen && (
           <div className="xl:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">الرئيسية</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">قائمة الشركات</a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">كل المنتجات</a>
+            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</a>
                       <div className="relative group cursor-pointer">
   <div className="flex items-center gap-1 hover:text-blue-600 transition">
     <span>الأقسام</span>

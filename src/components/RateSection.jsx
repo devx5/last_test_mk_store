@@ -56,7 +56,7 @@ const [showAll, setShowAll] = useState(false);
   };
 
   return (
-    <section className=" bg-[#8EA48B] px-4 sm:px-6 lg:px-8" dir="rtl ">
+    <section id="rate_section" className=" bg-[#8EA48B] px-4 sm:px-6 lg:px-8" dir="rtl ">
       <div className="">
         
         {/* عنوان السيكشن */}

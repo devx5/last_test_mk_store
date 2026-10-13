@@ -51,7 +51,7 @@ export default function CoreValues() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-1">
             القيم التي نلتزم بها معكم
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-sm text-slate-500 " style={{ marginBottom: '0.5rem' }}>
             الأعمدة الأساسية التي نعتمد عليها في اختيار كل منتج وتجربة نقدمها لكِ
           </p>
         </div>

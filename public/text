@@ -1,0 +1,236 @@
+import React from "react";
+
+export default function SephoraFooter() {
+  return (
+    <footer className="bg-[#101426] text-slate-300 font-sans pt-10 pb-6 border-t border-slate-800/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Feedback Button */}
+        <div className="flex justify-center pb-8 border-b border-slate-800/60">
+          <button
+            type="button"
+            className="text-xs text-slate-300 hover:text-white bg-[#1b2038] hover:bg-slate-800 border border-slate-700/60 rounded-full px-5 py-2 transition-colors"
+          >
+            Website feedback? Let us know ▸
+          </button>
+        </div>
+
+        {/* Top Features Links Bar */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 py-8 border-b border-slate-800/60 text-sm">
+          {/* Find a Store */}
+          <a href="/happening/stores/sephora-near-me" className="flex items-center gap-3 group hover:text-[#d82274] transition-colors">
+            <img src="/img/ufe/icons/find-store.svg" loading="lazy" alt="" className="w-6 h-6 filter invert opacity-80 group-hover:opacity-100" />
+            <span>
+              <span className="font-semibold block text-white group-hover:text-[#d82274]">Find a Store</span>
+              <span className="text-xs text-slate-400">Choose Your Store</span>
+            </span>
+          </a>
+
+          {/* Customer Service Chat */}
+          <div className="flex items-center gap-3">
+            <button type="button" aria-label="Customer Service Chat" className="flex items-center gap-3 group text-left w-full">
+              <div className="w-8 h-8 rounded-full bg-[#1b2038] flex items-center justify-center text-[#d82274]">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
+                  <path d="m21.87 21.733.837.224-.224-.837-1.158-4.327A10.466 10.466 0 0 0 22.479 12c0-5.798-4.696-10.5-10.49-10.5C6.196 1.5 1.5 6.202 1.5 12c0 5.799 4.696 10.5 10.49 10.5 2.195 0 4.233-.676 5.918-1.83l3.962 1.063z" />
+                </svg>
+              </div>
+              <span className="font-semibold text-white group-hover:text-[#d82274] transition-colors">
+                Customer Service Chat
+              </span>
+            </button>
+          </div>
+
+          {/* Get the App */}
+          <a href="/beauty/mobile" className="flex items-center gap-3 group hover:text-[#d82274] transition-colors">
+            <img src="/img/ufe/icons/app.svg" loading="lazy" alt="" className="w-6 h-6 filter invert opacity-80 group-hover:opacity-100" />
+            <span>
+              <strong className="block text-white group-hover:text-[#d82274]">Get the App</strong>
+              <span className="text-xs text-slate-400">Download Now</span>
+            </span>
+          </a>
+
+          {/* Get Sephora Texts */}
+          <a href="/beauty/text-alerts" className="flex items-center gap-3 group hover:text-[#d82274] transition-colors">
+            <img src="/img/ufe/icons/sms-evergreen.svg" loading="lazy" alt="" className="w-6 h-6 filter invert opacity-80 group-hover:opacity-100" />
+            <span>
+              <strong className="block text-white group-hover:text-[#d82274]">Get Sephora Texts</strong>
+              <span className="text-xs text-slate-400">Sign up Now</span>
+            </span>
+          </a>
+
+          {/* Sephora Credit Card */}
+          <a href="/creditcard" className="flex items-center gap-3 group hover:text-[#d82274] transition-colors">
+            <img src="/img/ufe/icons/cc-outline-ko.svg" loading="lazy" alt="" className="w-6 h-6 filter invert opacity-80 group-hover:opacity-100" />
+            <span className="text-xs leading-tight">
+              <strong className="block text-white group-hover:text-[#d82274] text-sm">Sephora Credit Card</strong>
+              <span className="text-slate-400">Want 25% off? <span className="underline text-[#d82274]">DETAILS</span></span>
+            </span>
+          </a>
+        </div>
+
+        {/* Main Footer Links Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 py-10 border-b border-slate-800/60">
+          
+          {/* Column 1: About Sephora */}
+          <div className="space-y-3">
+            <h2 className="text-white font-bold text-base border-l-4 border-[#d82274] pl-3">
+              About Sephora
+            </h2>
+            <ul className="space-y-2 text-xs text-slate-300">
+              <li><a href="https://www.inside-sephora.com/en/about-sephora" className="hover:text-[#d82274] transition-colors">About Sephora</a></li>
+              <li><a target="_blank" rel="noreferrer" href="https://newsroom.sephora.com/" className="hover:text-[#d82274] transition-colors">Newsroom</a></li>
+              <li><a href="https://www.inside-sephora.com/en/usa/join-us?market=7" className="hover:text-[#d82274] transition-colors">Careers</a></li>
+              <li><a href="https://www.inside-sephora.com/en/usa/life-at-sephora" className="hover:text-[#d82274] transition-colors">Sephora Values</a></li>
+              <li><a href="/beauty/supply-chain-transparency" className="hover:text-[#d82274] transition-colors">Supply Chain Transparency</a></li>
+              <li><a href="/beauty/affiliates" className="hover:text-[#d82274] transition-colors">Affiliates</a></li>
+              <li><a href="https://www.sephora-events.com" className="hover:text-[#d82274] transition-colors">Sephora Events</a></li>
+              <li><a href="/beauty/giftcards" className="hover:text-[#d82274] transition-colors">Gift Cards</a></li>
+              <li><a href="/beauty/international-websites" className="hover:text-[#d82274] transition-colors">Sephora Global Sites</a></li>
+              <li><a target="_blank" rel="noreferrer" href="https://www.inside-sephora.com/en/usa/diversity-equity-inclusion" className="hover:text-[#d82274] transition-colors">Diversity, Equity & Inclusion</a></li>
+              <li><a target="_blank" rel="noreferrer" href="https://sephoraaccelerate.com/" className="hover:text-[#d82274] transition-colors">Sephora Accelerate</a></li>
+              <li><a href="/beauty/pact-collective-recycling-program" className="hover:text-[#d82274] transition-colors">Beauty (Re)Purposed</a></li>
+              <li><a href="/beauty/vulnerability-disclosure-program" className="hover:text-[#d82274] transition-colors">Report a Vulnerability</a></li>
+            </ul>
+          </div>
+
+          {/* Column 2: My Sephora */}
+          <div className="space-y-3">
+            <h2 className="text-white font-bold text-base border-l-4 border-[#d82274] pl-3">
+              My Sephora
+            </h2>
+            <ul className="space-y-2 text-xs text-slate-300">
+              <li><a href="/profile/BeautyInsider" className="hover:text-[#d82274] transition-colors">Beauty Insider</a></li>
+              <li><a href="/creditcard" className="hover:text-[#d82274] transition-colors">Sephora Credit Card</a></li>
+              <li><a href="/community/gallery" className="hover:text-[#d82274] transition-colors">Gallery</a></li>
+              <li><a href="/beauty/order-status" className="hover:text-[#d82274] transition-colors">Order Status</a></li>
+              <li><a href="/purchase-history" className="hover:text-[#d82274] transition-colors">Purchase History</a></li>
+              <li><a href="/profile/MyAccount" className="hover:text-[#d82274] transition-colors">Account Settings</a></li>
+              <li><a href="/happening/services" className="hover:text-[#d82274] transition-colors">Beauty Services & Store Events</a></li>
+              <li><a href="/beauty/auto-replenish" className="hover:text-[#d82274] transition-colors">Auto-Replenish</a></li>
+              <li><a href="/beauty/beauty-offers" className="hover:text-[#d82274] transition-colors">Beauty Offers</a></li>
+              <li><a href="/rewards" className="hover:text-[#d82274] transition-colors">Rewards Bazaar</a></li>
+              <li><a href="/shopping-list" className="hover:text-[#d82274] transition-colors">Loves</a></li>
+              <li><a href="/happening/shop-my-store" className="hover:text-[#d82274] transition-colors">Shop Your Store</a></li>
+              <li><a href="/happening/shop-same-day" className="hover:text-[#d82274] transition-colors">Shop Same-Day Delivery</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Help */}
+          <div className="space-y-3">
+            <h2 className="text-white font-bold text-base border-l-4 border-[#d82274] pl-3">
+              Help
+            </h2>
+            <ul className="space-y-2 text-xs text-slate-300">
+              <li><a href="/beauty/customer-service" className="hover:text-[#d82274] transition-colors">Customer Service</a></li>
+              <li><a href="/beauty/returns-exchanges" className="hover:text-[#d82274] transition-colors">Returns & Exchanges</a></li>
+              <li><a href="/beauty/pick-up-delivery-options" className="hover:text-[#d82274] transition-colors">Delivery and Pickup Options</a></li>
+              <li><a href="/beauty/shipping-information" className="hover:text-[#d82274] transition-colors">Shipping</a></li>
+              <li><a href="/beauty/billing" className="hover:text-[#d82274] transition-colors">Billing</a></li>
+              <li><a href="/beauty/shipping-information#international-shipping" className="hover:text-[#d82274] transition-colors">International Shipments</a></li>
+              <li><a href="/beauty/best-beauty-products" className="hover:text-[#d82274] transition-colors">Buying Guides</a></li>
+              <li><a href="/beauty/beauty-services-faq" className="hover:text-[#d82274] transition-colors">Beauty Services FAQ</a></li>
+              <li><a href="/beauty/sephora-at-kohls" className="hover:text-[#d82274] transition-colors">Sephora at Kohl's</a></li>
+              <li><a href="/happening/stores/sephora-near-me" className="hover:text-[#d82274] transition-colors">Store Locations</a></li>
+              <li><a href="/beauty/flexible-payments" className="hover:text-[#d82274] transition-colors">Flexible Payments</a></li>
+              <li><a href="/beauty/accessibility" className="hover:text-[#d82274] transition-colors">Accessibility</a></li>
+              <li><a href="/beauty/teens-tweens-skincare" className="hover:text-[#d82274] transition-colors">Teen Skincare Resource</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Region & Language */}
+          <div className="space-y-3">
+            <h2 id="regionAndLanguage" className="text-white font-bold text-base border-l-4 border-[#d82274] pl-3">
+              Region & Language
+            </h2>
+            <div role="group" aria-labelledby="regionAndLanguage" className="space-y-2">
+              <button aria-label="Current Language Selected, United States - English" type="button" className="w-full flex items-center justify-between bg-[#1b2038] hover:bg-slate-800 border border-[#d82274] text-xs py-2 px-3 rounded text-white transition-colors">
+                <span className="flex items-center gap-2">
+                  <img src="/img/ufe/flags/us.svg" alt="" className="w-4 h-3" />
+                  <span>United States - English</span>
+                </span>
+                <span className="text-[#d82274]">✓</span>
+              </button>
+              <button aria-label="Change Language to Canada - English" type="button" className="w-full flex items-center gap-2 bg-[#1b2038] hover:bg-slate-800 border border-slate-700/60 text-xs py-2 px-3 rounded text-slate-300 transition-colors">
+                <img src="/img/ufe/flags/ca.svg" alt="" className="w-4 h-3" />
+                <span>Canada - English</span>
+              </button>
+              <button aria-label="Change Language to Canada - Français" type="button" className="w-full flex items-center gap-2 bg-[#1b2038] hover:bg-slate-800 border border-slate-700/60 text-xs py-2 px-3 rounded text-slate-300 transition-colors">
+                <img src="/img/ufe/flags/ca.svg" alt="" className="w-4 h-3" />
+                <span>Canada - Français</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Column 5: Newsletter Signup */}
+          <div className="space-y-4">
+            <h2 className="text-white font-bold text-[#d82274] text-lg leading-snug">
+              We Belong to<br />Something Beautiful
+            </h2>
+            <div>
+              <label htmlFor="emailSignUpInput" className="text-xs text-slate-400 block mb-2">Sign up for Sephora Emails</label>
+              <form noValidate className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+                <input
+                  type="email"
+                  id="emailSignUpInput"
+                  name="email"
+                  maxLength={60}
+                  placeholder="Enter your email address"
+                  className="w-full bg-[#1b2038] text-white placeholder-slate-500 text-xs px-3 py-2.5 rounded border border-slate-700/60 focus:outline-none focus:border-[#d82274] transition-colors"
+                />
+                <button type="submit" className="w-full bg-[#d82274] hover:bg-[#c01a65] text-white text-xs font-semibold py-2.5 rounded transition-colors shadow-md shadow-[#d82274]/20">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Social Links & Legal Bottom Bar */}
+        <div className="pt-8 space-y-6">
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            <a href="https://www.instagram.com/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/instagram-ko.svg" alt="Instagram" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://www.facebook.com/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/facebook-ko.svg" alt="Facebook" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://x.com/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/x-ko.svg" alt="X" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://www.youtube.com/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/youtube-ko.svg" alt="YouTube" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://www.pinterest.com/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/pinterest-ko.svg" alt="Pinterest" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://www.snapchat.com/add/sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/snapchat-ko.svg" alt="Snapchat" className="w-4 h-4 filter invert" />
+            </a>
+            <a href="https://www.tiktok.com/@sephora" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-[#101426] hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <img src="/img/ufe/icons/tiktok-ko.svg" alt="TikTok" className="w-4 h-4 filter invert" />
+            </a>
+          </div>
+
+          {/* Legal and Copyright Info */}
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-slate-400 pt-4 border-t border-slate-800/40">
+            <p>© 2026 Sephora USA, Inc. All rights reserved.</p>
+            <div className="flex flex-wrap items-center gap-4 text-slate-300">
+              <a href="/beauty/privacy-policy" className="hover:text-[#d82274] transition-colors">Privacy Policy</a>
+              <a href="/beauty/terms-of-use" className="hover:text-[#d82274] transition-colors">Terms of Use</a>
+              <a href="/beauty/accessibility" className="hover:text-[#d82274] transition-colors">Accessibility</a>
+              <a href="/sitemap/departments/" className="hover:text-[#d82274] transition-colors">Sitemap</a>
+              <button id="clarip-do-not-sell-link" type="button" className="flex items-center gap-1 hover:text-[#d82274] transition-colors">
+                <span>Your Privacy Choices</span>
+                <img src="/img/ufe/icons/opt-out.svg" alt="" className="w-3.5 h-3.5 filter invert" />
+              </button>
+            </div>
+            <p className="text-slate-300">1-877-737-4672</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+} 

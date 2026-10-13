@@ -18,7 +18,7 @@ export default function TeamSection() {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-1">
             الخبيرات خلف اختيار منتجاتكِ
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-sm text-slate-500 " style={{ marginBottom: '0.5rem' }}>
             فريق متخصص يعمل يومياً لضمان اختيار أفضل المنتجات الآمنة لبشرتك
           </p>
         </div>

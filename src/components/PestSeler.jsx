@@ -3,6 +3,7 @@ import lcar from '../assets/img/best_seler_img/lcar.jpeg'
 import creem from '../assets/img/best_seler_img/creem.jpeg'
 import frute from '../assets/img/best_seler_img/frute.jpeg'
 import shia from '../assets/img/best_seler_img/shia.jpeg'
+import { Link } from 'react-router-dom'
 function PestSeler() {
   return (
     <div>
@@ -14,7 +15,7 @@ function PestSeler() {
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
 
   <a  href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group">
-        <span>عرض كل المنتجات</span>
+        <Link to="/all-products">عرض كل المنتجات</Link>
         <span className="group-hover:-translate-x-1 transition-transform">←</span>
       </a>
 

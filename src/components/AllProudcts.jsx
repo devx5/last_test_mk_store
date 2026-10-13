@@ -137,8 +137,8 @@ const ALLProudcts = () => {
     <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
       
       {/* 1. سيكشن الأقسام العلوي مع أنيميشن خفيف عند التحويم */}
-      <div className="mb-10 bg-white shadow-md rounded-2xl p-6 border border-gray-100" style={{ marginBottom: '2rem' }}>
-        <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+      <div className="mb-10 bg-white shadow-md rounded-2xl p-6 border border-gray-100" style={{ marginBottom: '3rem' }}>
+        <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2 " style={{ marginBottom: '1rem' }}>
           <Sparkles className="w-6 h-6 text-pink-600 animate-spin" style={{ animationDuration: '4s' }} />
           أقسام المنتجات
         </h2>
@@ -161,7 +161,7 @@ const ALLProudcts = () => {
       </div>
 
       {/* زر فتح الفلترة للموبايل والتابلت */}
-      <div className="lg:hidden mb-6 flex justify-between items-center bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+      <div className="lg:hidden mb-6 flex justify-between items-center bg-white p-4 rounded-2xl border border-gray-100 shadow-sm" style={{ marginBottom: '2rem' }}>
         <span className="text-sm font-bold text-gray-700">
           المنتجات المتاحة ({filteredProducts.length})
         </span>
