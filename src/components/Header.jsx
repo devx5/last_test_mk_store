@@ -26,7 +26,7 @@ export default function Header() {
     <header className='w-full h-[70px] mt-0  left-0 top-0 md:h-[90px] bg-[#0f172a] mb-[38px]  shadow-sm flex items-center justify-between '>
       {/* start contact icon */}
       <div className='mt-[20px]  sm:mt-[15px] md:mt-[15px]'>
-        <a href="https://wa.me/01062773439" className=' ml-[20px] text-white '><i className="fa-brands fa-square-whatsapp text-[30px] md:text-[40px]" style={{ color: " #25D366" }} /></a>
+        <a href="https://wa.me/@mo.elmnawii" className=' ml-[20px] text-white '><i className="fa-brands fa-square-whatsapp text-[30px] md:text-[40px]" style={{ color: " #25D366" }} /></a>
 
         <a href="tel:01062773439" className=' ml-[15px] text-white '><i className="fa-solid fa-square-phone text-[30px] md:text-[40px]" style={{ color: " #25D366" }} /></a>
       </div>
@@ -46,7 +46,7 @@ export default function Header() {
 
       {/* start social media div  */}
       <div className='mt-[20px] sm:mt-[15px] md:mt-[15px]'>
-        <a href="tel:https://www.facebook.com/profile.php?id=61594241914299" className=' mr-[18px] text-white '><i className="fa-brands fa-facebook text-[30px] md:text-[40px]" style={{ color: " #0044ff" }} /></a>
+        <a href="https://www.facebook.com/profile.php?id=61594241914299" className=' mr-[18px] text-white '><i className="fa-brands fa-facebook text-[30px] md:text-[40px]" style={{ color: " #0044ff" }} /></a>
         <a href="https://www.instagram.com/mekka_cosmetics?psln=MXRrZ2lxbWZlbnhzNw%3D%3D&utm_source=qr" className=' mr-[18px] text-white '><i className="fa-brands fa-instagram text-[30px] md:text-[40px]" style={{ color: " #E4405F" }} /></a>
         <a href="tel:01062773439" className=' mr-[10px] text-white '><i className="fa-brands fa-tiktok text-[30px] md:text-[40px]" style={{ color: " #99ffff" }} /></a>
 

@@ -204,7 +204,7 @@ export default function SephoraFooterCustom() {
             <a href="tel:01062773439" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
                <i className="fa-solid fa-square-phone " style={{ color: " #25D366" }} />
             </a>
-            <a href="https://web.whatsapp.com/send?phone=201062773439" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+            <a href="https://wa.me/@mo.elmnawii" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
              <i className="fa-brands fa-square-whatsapp " style={{ color: " #25D366" }} />
 
             </a>

@@ -167,10 +167,10 @@ const [showNavbar, setShowNavbar] = useState(true);
         {/* Mobile Menu Drawer / Dropdown */}
         {isMobileMenuOpen && (
           <div className="xl:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">الرئيسية</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">قائمة الشركات</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">كل المنتجات</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</a>
+            <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">الرئيسية</Link>
+            <Link to="/Companies" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">قائمة الشركات</Link>
+            <Link to="/AllProducts" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">كل المنتجات</Link>
+            <Link to="/About" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</Link>
                       <div className="relative group cursor-pointer">
   <div className="flex items-center gap-1 hover:text-blue-600 transition">
     <span>الأقسام</span>
@@ -188,8 +188,8 @@ const [showNavbar, setShowNavbar] = useState(true);
     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المستلزمات والمكملات</a>
   </div>
 </div>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">سياسة الاستبدال والاسترجاع</a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">اتصل بنا</a>
+            <Link to="/ReturnPolicy" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">سياسة الاستبدال والاسترجاع</Link>
+            <Link to="/Contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">اتصل بنا</Link>
           </div>
         )}
       </header>
