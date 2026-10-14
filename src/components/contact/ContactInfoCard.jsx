@@ -41,7 +41,7 @@ export default function ContactInfoCards() {
           {contactMethods.map((item) => (
             <div
               key={item.id}
-              className={`p-6 rounded-2xl border text-center transition-all duration-300 hover:-translate-y-1 ${item.color}`}
+              className={`p-6 rounded-2xl border text-center transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 ${item.color}`}
             >
               <div className="text-4xl mb-4">{item.icon}</div>
               <h3 className="font-bold text-slate-800 text-lg mb-1">{item.title}</h3>
@@ -53,7 +53,7 @@ export default function ContactInfoCards() {
                 href={item.actionLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block px-4 py-2 bg-white rounded-xl text-xs font-bold shadow-sm border border-slate-200 hover:bg-slate-50 transition"
+                className="inline-block px-4 py-2 bg-white rounded-xl text-xs font-bold shadow-sm border border-slate-200 hover:bg-slate-50 active:bg-slate-100 transition"
               >
                 {item.actionText}
               </a>

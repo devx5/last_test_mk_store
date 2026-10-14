@@ -74,7 +74,7 @@ const [showAll, setShowAll] = useState(false);
   {(showAll ? reviews : reviews.slice(0, 3)).map((review) => (
     <div
       key={review.id}
-      className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative border border-gray-100 flex flex-col justify-between"
+      className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:shadow-xl relative border border-gray-100 flex flex-col justify-between"
     >
       <div className="absolute top-2 left-2 text-emerald-600 opacity-20">
         <Quote size={40} />
@@ -121,7 +121,7 @@ const [showAll, setShowAll] = useState(false);
   <button
     type="button"
     onClick={() => setShowAll(!showAll)}
-    className=" px-6 py-3 bg-white border-2 border-emerald-600 text-emerald-600 font-bold rounded-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm cursor-pointer"
+    className=" px-6 py-3 bg-white border-2 border-emerald-600 text-emerald-600 font-bold rounded-xl hover:bg-emerald-600 hover:text-white active:bg-emerald-600 active:text-white transition-all duration-300 shadow-sm cursor-pointer"
   >
     {showAll ? 'إخفاء التعليقات' : 'عرض جميع التعليقات'}
   </button>
@@ -184,7 +184,7 @@ const [showAll, setShowAll] = useState(false);
 
             <button
               type="submit"
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md"
             >
               <Send size={18} />
               إرسال التقييم

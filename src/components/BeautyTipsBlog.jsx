@@ -20,19 +20,19 @@ function BeautyTipsBlog() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       
       {/* مقال 1 */}
-      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
+      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
         {/* صورة المقال أو التوضيح */}
         <div className="relative bg-pink-50 h-48 overflow-hidden flex items-center justify-center">
           <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-pink-600 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
             العناية بالبشرة
           </span>
-          <span className="text-5xl group-hover:scale-110 transition-transform duration-300">🌸</span>
+          <span className="text-5xl group-hover:scale-110 group-active:scale-100 transition-transform duration-300">🌸</span>
         </div>
 
         {/* محتوى المقال */}
         <div className="p-6 flex flex-col flex-grow">
           <div className="text-gray-400 text-xs mb-2">منذ يومين • 3 دقائق قراءة</div>
-          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 transition-colors line-clamp-2">
+          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 group-active:text-pink-600 transition-colors line-clamp-2">
             الروتين المثالي للعناية بالبشرة المختلطة في أيام الصيف الحارة
           </h3>
           <p className="text-gray-500 text-sm mb-6 line-clamp-3">
@@ -41,23 +41,23 @@ function BeautyTipsBlog() {
           <div className="mt-auto pt-4 border-t border-gray-50">
             <a href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group">
               <span>اقرأ المقال كاملاً</span>
-              <span className="group-hover:-translate-x-1 transition-transform">←</span>
+              <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* مقال 2 */}
-      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
+      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
         <div className="relative bg-pink-50 h-48 overflow-hidden flex items-center justify-center">
           <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-pink-600 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
             العناية بالشعر
           </span>
-          <span className="text-5xl group-hover:scale-110 transition-transform duration-300">🌿</span>
+          <span className="text-5xl group-hover:scale-110 group-active:scale-100 transition-transform duration-300">🌿</span>
         </div>
         <div className="p-6 flex flex-col flex-grow">
           <div className="text-gray-400 text-xs mb-2">منذ 4 أيام • 4 دقائق قراءة</div>
-          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 transition-colors line-clamp-2">
+          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 group-active:text-pink-600 transition-colors line-clamp-2">
             أفضل الزيوت الطبيعية لعلاج تقصف الشعر وإعادة الحيوية إليه
           </h3>
           <p className="text-gray-500 text-sm mb-6 line-clamp-3">
@@ -66,23 +66,23 @@ function BeautyTipsBlog() {
           <div className="mt-auto pt-4 border-t border-gray-50">
             <a href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group">
               <span>اقرأ المقال كاملاً</span>
-              <span className="group-hover:-translate-x-1 transition-transform">←</span>
+              <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* مقال 3 */}
-      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
+      <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group">
         <div className="relative bg-pink-50 h-48 overflow-hidden flex items-center justify-center">
           <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-pink-600 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
             ص صيحات المكياج
           </span>
-          <span className="text-5xl group-hover:scale-110 transition-transform duration-300">💄</span>
+          <span className="text-5xl group-hover:scale-110 group-active:scale-100 transition-transform duration-300">💄</span>
         </div>
         <div className="p-6 flex flex-col flex-grow">
           <div className="text-gray-400 text-xs mb-2">منذ أسبوع • 5 دقائق قراءة</div>
-          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 transition-colors line-clamp-2">
+          <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 group-active:text-pink-600 transition-colors line-clamp-2">
             كيف تحصلين على إطلالة مكياج طبيعية وثابتة طوال ساعات العمل؟
           </h3>
           <p className="text-gray-500 text-sm mb-6 line-clamp-3">
@@ -91,7 +91,7 @@ function BeautyTipsBlog() {
           <div className="mt-auto pt-4 border-t border-gray-50">
             <a href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group">
               <span>اقرأ المقال كاملاً</span>
-              <span className="group-hover:-translate-x-1 transition-transform">←</span>
+              <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
             </a>
           </div>
         </div>

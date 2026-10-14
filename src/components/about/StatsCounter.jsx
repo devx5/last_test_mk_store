@@ -19,7 +19,7 @@ export default function StatsCounter() {
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition duration-300"
+              className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 active:bg-white/15 transition duration-300"
             >
               <span className="text-2xl mb-2 block">{stat.icon}</span>
               <p className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-1">

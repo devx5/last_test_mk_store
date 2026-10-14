@@ -28,7 +28,7 @@ export default function TeamSection() {
           {team.map((member) => (
             <div
               key={member.id}
-              className="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 text-center hover:shadow-md transition-shadow duration-300"
+              className="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 text-center hover:shadow-md active:shadow-md transition-shadow duration-300"
             >
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-4xl shadow-inner">
                 {member.icon}

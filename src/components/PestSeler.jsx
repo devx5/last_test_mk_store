@@ -14,9 +14,9 @@ function PestSeler() {
     {/* عنوان القسم والزر الجانبي */}
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
 
-  <a  href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group">
+  <a  href="#" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-700  font-semibold text-sm transition-colors group">
         <Link to="/all-products">عرض كل المنتجات</Link>
-        <span className="group-hover:-translate-x-1 transition-transform">←</span>
+        <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
       </a>
 
 
@@ -37,20 +37,20 @@ function PestSeler() {
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       
       {/* منتج 1 */}
-      <div className= "bg-white rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
+      <div className= "bg-white rounded-2xl border border-gray-100 hover:border-pink-200 active:border-pink-200 shadow-sm hover:shadow-lg active:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
         {/* صورة المنتج والشارة */}
         <div className="relative bg-gray-50 h-48 md:h-60 overflow-hidden flex items-center justify-center">
           <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
             الأكثر مبيعاً
           </span>
-           <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src={lcar} alt="Lcar" />
+           <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 active:scale-105" src={lcar} alt="Lcar" />
          
         </div>
 
         {/* تفاصيل المنتج */}
         <div className="p-4 flex flex-col flex-grow">
           <span className="text-xs text-gray-400 mb-1">العناية بالبشرة</span>
-          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 transition-colors">
+          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
             سيروم الهيالورونيك اسيد المرطب
           </h3>
 
@@ -66,7 +66,7 @@ function PestSeler() {
               <span className="text-pink-600 font-bold text-base md:text-lg">250 ج.م</span>
               <span className="text-gray-400 text-xs line-through mr-2">320 ج.م</span>
             </div>
-            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
+            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
               <span className="text-lg">🛒</span>
             </button>
           </div>
@@ -74,16 +74,16 @@ function PestSeler() {
       </div>
 
       {/* منتج 2 */}
-      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
+      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 active:border-pink-200 shadow-sm hover:shadow-lg active:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
         <div className="relative bg-gray-50 h-48 md:h-60 overflow-hidden flex items-center justify-center">
           <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
             الأكثر مبيعاً
           </span>
-          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src={creem} alt="Creem" />
+          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 active:scale-105" src={creem} alt="Creem" />
         </div>
         <div className="p-4 flex flex-col flex-grow">
           <span className="text-xs text-gray-400 mb-1">المكياج</span>
-          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 transition-colors">
+          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
             أحمر شفاه مات طويل الثبات
           </h3>
           <div className="flex items-center gap-1 my-2">
@@ -94,7 +94,7 @@ function PestSeler() {
             <div>
               <span className="text-pink-600 font-bold text-base md:text-lg">180 ج.م</span>
             </div>
-            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
+            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
               <span className="text-lg">🛒</span>
             </button>
           </div>
@@ -102,16 +102,16 @@ function PestSeler() {
       </div>
 
       {/* منتج 3 */}
-      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
+      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 active:border-pink-200 shadow-sm hover:shadow-lg active:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
         <div className="relative bg-gray-50 h-48 md:h-60 overflow-hidden flex items-center justify-center">
           <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
             الأكثر مبيعاً
           </span>
-          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src={frute} alt="Frute" />
+          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 active:scale-105" src={frute} alt="Frute" />
         </div>
         <div className="p-4 flex flex-col flex-grow">
           <span className="text-xs text-gray-400 mb-1">العناية بالشعر</span>
-          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 transition-colors">
+          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
             ماسك الشعر المغذي بزيت الأرجان
           </h3>
           <div className="flex items-center gap-1 my-2">
@@ -123,7 +123,7 @@ function PestSeler() {
               <span className="text-pink-600 font-bold text-base md:text-lg">310 ج.م</span>
               <span className="text-gray-400 text-xs line-through mr-2">390 ج.م</span>
             </div>
-            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
+            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
               <span className="text-lg">🛒</span>
             </button>
           </div>
@@ -131,16 +131,16 @@ function PestSeler() {
       </div>
 
       {/* منتج 4 */}
-      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
+      <div className="bg-white rounded-2xl border border-gray-100 hover:border-pink-200 active:border-pink-200 shadow-sm hover:shadow-lg active:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group">
         <div className="relative bg-gray-50 h-48 md:h-60 overflow-hidden flex items-center justify-center">
           <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
             الأكثر مبيعاً
           </span>
-          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src={shia} alt="Shia" />
+          <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 active:scale-105" src={shia} alt="Shia" />
         </div>
         <div className="p-4 flex flex-col flex-grow">
           <span className="text-xs text-gray-400 mb-1">العناية بالجسم</span>
-          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 transition-colors">
+          <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
             مقشر الجسم الطبيعي بالقهوة
           </h3>
           <div className="flex items-center gap-1 my-2">
@@ -151,7 +151,7 @@ function PestSeler() {
             <div>
               <span className="text-pink-600 font-bold text-base md:text-lg">220 ج.م</span>
             </div>
-            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
+            <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
               <span className="text-lg">🛒</span>
             </button>
           </div>

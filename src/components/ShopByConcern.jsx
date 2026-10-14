@@ -56,14 +56,14 @@ export default function ShopByConcern() {
               key={item.id}
               className='p-6 rounded-2xl border transition-all duration-300 cursor-pointer text-center group ${item.bgCard} ${item.borderColor}}'
             >
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white shadow-sm flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white shadow-sm flex items-center justify-center text-3xl group-hover:scale-110 group-active:scale-110 transition-transform duration-300">
                 {item.icon}
               </div>
               <h3 className="font-bold text-slate-800 text-lg mb-1">
                 {item.title}
               </h3>
               <p className="text-xs text-slate-500 mb-4">{item.description}</p>
-              <span className="inline-flex items-center gap-1 text-xs font-bold text-pink-600 group-hover:-translate-x-1 transition-transform duration-300">
+              <span className="inline-flex items-center gap-1 text-xs font-bold text-pink-600 group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform duration-300">
                 <span>استكشفي المنتجات</span>
                 <span>&#8592;</span>
               </span>

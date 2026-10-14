@@ -147,12 +147,12 @@ const ALLProudcts = () => {
           {categories.map((cat, index) => (
             <div 
               key={index} 
-              className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 group shadow-sm hover:-translate-y-1"
+              className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 active:bg-pink-100 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 group shadow-sm hover:-translate-y-1"
             >
-              <div className="p-3 bg-white rounded-full shadow-sm mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="p-3 bg-white rounded-full shadow-sm mb-3 group-hover:scale-110 group-active:scale-100 transition-transform duration-300">
                 {cat.icon}
               </div>
-              <span className="text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600">
+              <span className="text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600 group-active:text-pink-600">
                 {cat.name}
               </span>
             </div>
@@ -167,7 +167,7 @@ const ALLProudcts = () => {
         </span>
         <button
           onClick={() => setIsDrawerOpen(true)}
-          className="px-4 py-2.5 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl flex items-center gap-2 transition shadow-sm"
+          className="px-4 py-2.5 bg-pink-600 hover:bg-pink-700 active:bg-pink-700 text-white text-xs font-bold rounded-xl flex items-center gap-2 transition shadow-sm"
         >
           <Filter className="w-4 h-4" />
           تصفية المنتجات
@@ -216,7 +216,7 @@ const ALLProudcts = () => {
                         style={{ width: '100%', height: '200px', objectFit: 'cover' }}
                         src={product.thumbnail} 
                         alt={product.title} 
-                        className="w-full h-48 object-cover bg-gray-100 transition-transform duration-500 hover:scale-105"
+                        className="w-full h-48 object-cover bg-gray-100 transition-transform duration-500 hover:scale-105 active:scale-105"
                       />
                     </div>
                     <div className="p-4">
@@ -269,7 +269,7 @@ const ALLProudcts = () => {
                         </>
                       ) : (
                         <>
-                          <ShoppingCart className="w-4 h-4 transition-transform group-hover:rotate-12" />
+                          <ShoppingCart className="w-4 h-4 transition-transform group-hover:rotate-12 group-active:rotate-12" />
                           أضف إلى السلة
                         </>
                       )}

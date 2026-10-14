@@ -61,7 +61,7 @@ export default function CoreValues() {
           {values.map((item) => (
             <div
               key={item.id}
-              className={`p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-md ${item.bgCard} ${item.borderColor}`}
+              className={`p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-md active:shadow-md ${item.bgCard} ${item.borderColor}`}
             >
               <div
                 className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm ${item.iconBg}`}

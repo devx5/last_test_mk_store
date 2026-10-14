@@ -35,7 +35,7 @@ export default function TradeMarks() {
           {[...brands, ...brands, ...brands].map((brand, index) => (
             <div
               key={index}
-              className="w-36 sm:w-48 h-20 sm:h-24 bg-white rounded-2xl border border-slate-200 flex items-center justify-center font-bold text-slate-700 text-sm sm:text-base shadow-sm hover:shadow-md hover:border-pink-500 hover:text-pink-600 transition cursor-pointer shrink-0 select-none transform hover:-translate-y-1"
+              className="w-36 sm:w-48 h-20 sm:h-24 bg-white rounded-2xl border border-slate-200 flex items-center justify-center font-bold text-slate-700 text-sm sm:text-base shadow-sm hover:shadow-md active:shadow-md hover:border-pink-500 active:border-pink-500 hover:text-pink-600 active:text-pink-600 transition cursor-pointer shrink-0 select-none transform hover:-translate-y-1"
             >
               {brand.name}
             </div>

@@ -54,7 +54,7 @@ export default function FAQAccordion() {
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full text-right p-5 bg-slate-50/50 hover:bg-slate-50 flex items-center justify-between gap-4 font-bold text-slate-800 text-sm sm:text-base cursor-pointer"
+                  className="w-full text-right p-5 bg-slate-50/50 hover:bg-slate-50 active:bg-slate-50 flex items-center justify-between gap-4 font-bold text-slate-800 text-sm sm:text-base cursor-pointer"
                 >
                   <span>{faq.question}</span>
                   <span

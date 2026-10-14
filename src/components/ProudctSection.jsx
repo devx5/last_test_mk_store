@@ -54,14 +54,14 @@ const BeautyProducts = () => {
           return (
             <div 
               key={product.id} 
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md active:shadow-md transition-all duration-300 flex flex-col justify-between group"
             >
               {/* صورة المنتج */}
               <div className="overflow-hidden relative bg-gray-50 h-52">
                 <img 
                   src={product.thumbnail} // رابط الصورة المصغرة من الـ API
                   alt={product.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-500" 
                 />
               </div>
 
@@ -87,7 +87,7 @@ const BeautyProducts = () => {
                     key={star}
                     type="button"
                     onClick={() => handleRate(product.id, star)}
-                    className="focus:outline-none transition-transform hover:scale-125 duration-150"
+                    className="focus:outline-none transition-transform hover:scale-125 active:scale-125 duration-150"
                   >
                     <i 
                       className={`fa-star ${star <= currentRating ? 'fa-solid text-amber-400' : 'fa-regular text-gray-300'} text-lg`}
@@ -99,7 +99,7 @@ const BeautyProducts = () => {
               {/* زر تسوق الآن */}
               <div className="p-4 pt-0">
                 <button 
-                  className="w-full bg-pink-600 text-white py-2.5 rounded-xl font-medium hover:bg-pink-700 transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-pink-600 text-white py-2.5 rounded-xl font-medium hover:bg-pink-700 active:bg-pink-700 transition-colors flex items-center justify-center gap-2"
                 >
                   <span>تسوق الآن</span>
                   <i className="fa-solid fa-regular fa-cart-shopping" style={{color: "rgb(255, 255, 255)"}}></i>
@@ -115,7 +115,7 @@ const BeautyProducts = () => {
       <div className="mt-18 md:py-4 lg:py-10 text-center ">
         <Link 
           to="/all-products" 
-          className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-md"
+          className="inline-block bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-800 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-md"
         >
           <i className="fa-solid fa-arrow-left mr-2"></i>
           <span>عرض الكل</span>

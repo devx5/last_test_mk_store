@@ -65,7 +65,7 @@ useEffect(() => {
             {/* زر السهم الأيمن (خارج نطاق الكروت) */}
             <button 
               onClick={() => handleScroll('left')}
-              className={`w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shrink-0 z-10 ${isAtStart ? 'opacity-50 grayscale cursor-not-allowed text-gray-800' : ''}`} disabled={isAtStart}
+              className={`w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-pink-600 active:bg-pink-600 hover:text-white active:text-white hover:border-pink-600 active:border-pink-600 transition-all duration-300 shrink-0 z-10 ${isAtStart ? 'opacity-50 grayscale cursor-not-allowed text-gray-800' : ''}`} disabled={isAtStart}
               title="السابق"
             >
                ←
@@ -82,12 +82,12 @@ useEffect(() => {
                   <a 
                     key={item.id} 
                     href="#" 
-                    className="min-w-[140px] md:min-w-[170px] group flex flex-col items-center bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-pink-300 shrink-0 select-none"
+                    className="min-w-[140px] md:min-w-[170px] group flex flex-col items-center bg-white p-4 rounded-2xl shadow-sm hover:shadow-md active:shadow-md transition-all duration-300 border border-gray-100 hover:border-pink-300 active:border-pink-300 shrink-0 select-none"
                   >
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 group-active:scale-105 transition-transform duration-300">
                       <span className="text-2xl md:text-3xl">{item.icon}</span>
                     </div>
-                    <span className="font-semibold text-gray-800 text-sm md:text-base text-center group-hover:text-pink-600 transition-colors">
+                    <span className="font-semibold text-gray-800 text-sm md:text-base text-center group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
                       {item.name}
                     </span>
                   </a>
@@ -98,7 +98,7 @@ useEffect(() => {
             {/* زر السهم الأيسر (خارج نطاق الكروت) */}
             <button 
               onClick={() => handleScroll('right')}
-              className={`w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shrink-0 z-10 ${isAtEnd ? 'opacity-50 grayscale cursor-not-allowed text-gray-800' : ''}`} disabled={isAtEnd}
+              className={`w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:bg-pink-600 active:bg-pink-600 hover:text-white active:text-white hover:border-pink-600 active:border-pink-600 transition-all duration-300 shrink-0 z-10 ${isAtEnd ? 'opacity-50 grayscale cursor-not-allowed text-gray-800' : ''}`} disabled={isAtEnd}
               title="التالي"
             >
                 →
