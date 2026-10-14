@@ -54,10 +54,10 @@ const [showNavbar, setShowNavbar] = useState(true);
 
             {/* Logo */}
             <div className=" flex items-center">
-              <a href="#" className="text-2xl font-bold tracking-tight text-blue-900 flex items-center gap-1">
+              <Link to="/" className="text-2xl font-bold tracking-tight text-blue-900 flex items-center gap-1">
                 <span className="text-gray-700 mt-1 ">Store</span>
                 <img src={logo} className="h-15 w-15 " alt="Mekkah Logo" />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation Links */}

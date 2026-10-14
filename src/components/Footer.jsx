@@ -187,7 +187,7 @@ export default function SephoraFooterCustom() {
           <div className="text-center md:text-right ">
             <p className="p-2">© 2026 جميع الحقوق محفوظة لشركة مكه.</p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-slate-300">
-              <a href="#" className="hover:text-[#d82274] transition-colors">سياسة الخصوصية</a>
+              <a href="#" className="hover:text-[#d82274] transition-colors p-2">سياسة الخصوصية</a>
               <a href="#" className="hover:text-[#d82274] transition-colors">شروط الاستخدام</a>
               <a href="#" className="hover:text-[#d82274] transition-colors">إمكانية الوصول</a>
               <a href="#" className="hover:text-[#d82274] transition-colors">خريطة الموقع</a>
@@ -196,25 +196,25 @@ export default function SephoraFooterCustom() {
                 <span className="text-[#d82274]">✓</span>
               </button>
             </div>
-            <p className="text-slate-400 dir-ltr text-right p-2">201062773439+</p>
+            <Link to="tel:201062773439+" className="text-slate-400 dir-ltr text-right hover:text-[#d82274] transition-colors mr-2">201062773439+</Link>
           </div>
 
-          {/* أيقونات التواصل الاجتماعي (اليسار كما بالصورة[cite: 2]) */}
+          {/* أيقونات التواصل الاجتماعي  */}
           <div className="flex items-center gap-3 text-lg">
-            <a href="#" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+            <a href="tel:01062773439" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
                <i className="fa-solid fa-square-phone " style={{ color: " #25D366" }} />
             </a>
-            <a href="#" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+            <a href="https://web.whatsapp.com/send?phone=201062773439" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
              <i className="fa-brands fa-square-whatsapp " style={{ color: " #25D366" }} />
 
             </a>
             <a href="#" aria-label="X" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
               <i className="fa-brands fa-tiktok " style={{ color: " #99ffff" }} />
             </a>
-            <a href="#" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
-              <i className="fa-brands fa-youtube " style={{ color: " #FF0000" }} />
+            <a href="https://www.instagram.com/mekka_cosmetics?psln=MXRrZ2lxbWZlbnhzNw%3D%3D&utm_source=qr" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+              <i className="fa-brands fa-instagram" style={{ color: " #E4405F" }} />
             </a>
-            <a href="#" aria-label="Pinterest" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
+            <a href="https://www.facebook.com/profile.php?id=61594241914299" aria-label="Pinterest" className="w-8 h-8 rounded-full bg-[#1b2038] hover:bg-[#d82274] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700/50">
               <i className="fa-brands fa-facebook " style={{ color: " #0044ff" }} />
             </a>
           
@@ -223,7 +223,7 @@ export default function SephoraFooterCustom() {
         </div>
 
       </div>
-      <p className="text-slate-400 text-center ">developed by mohamed othman</p>
+      <p className="text-slate-400 text-center " style={{ marginTop: "20px" }}>developed by mohamed othman</p>
     </footer>
   );
 }

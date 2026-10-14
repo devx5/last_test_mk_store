@@ -46,8 +46,8 @@ export default function Header() {
 
       {/* start social media div  */}
       <div className='mt-[20px] sm:mt-[15px] md:mt-[15px]'>
-        <a href="tel:01062773439" className=' mr-[18px] text-white '><i className="fa-brands fa-facebook text-[30px] md:text-[40px]" style={{ color: " #0044ff" }} /></a>
-        <a href="tel:01062773439" className=' mr-[18px] text-white '><i className="fa-brands fa-instagram text-[30px] md:text-[40px]" style={{ color: " #E4405F" }} /></a>
+        <a href="tel:https://www.facebook.com/profile.php?id=61594241914299" className=' mr-[18px] text-white '><i className="fa-brands fa-facebook text-[30px] md:text-[40px]" style={{ color: " #0044ff" }} /></a>
+        <a href="https://www.instagram.com/mekka_cosmetics?psln=MXRrZ2lxbWZlbnhzNw%3D%3D&utm_source=qr" className=' mr-[18px] text-white '><i className="fa-brands fa-instagram text-[30px] md:text-[40px]" style={{ color: " #E4405F" }} /></a>
         <a href="tel:01062773439" className=' mr-[10px] text-white '><i className="fa-brands fa-tiktok text-[30px] md:text-[40px]" style={{ color: " #99ffff" }} /></a>
 
       </div>

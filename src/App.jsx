@@ -41,18 +41,18 @@ function App() {
             element={
               <div>
                 <HeroSection />
-                <SaleSection/>
-                <PestSeler/>
-                <TradeMarks/>
+                <SaleSection />
+                <PestSeler />
+                <TradeMarks />
                 <MainDepartment />
-                <ShopByConcern/>
+                <ShopByConcern />
                 <ProudctSection />
                 <SkinQuizBanner />
-                  <RateSection/>
-                  <FeaturesSection/>                
-                  <BeautyTipsBlog/>
-                  <FAQAccordion />
-                
+                <RateSection />
+                <FeaturesSection />
+                <BeautyTipsBlog />
+                <FAQAccordion />
+
               </div>
             }
           />
@@ -68,15 +68,15 @@ function App() {
               <div className="about_pages">
                 <HeroStory />
                 <CoreValues />
-                <StatsCounter/>
-                <QualityPromise/>
-                <TeamSection/>
+                <StatsCounter />
+                <QualityPromise />
+                <TeamSection />
               </div>
             }
           />
-           <Route path="/returnpolicy"
+          <Route path="/returnpolicy"
             element={
-            <ReturnPolicyPage />} />
+              <ReturnPolicyPage />} />
 
           <Route
             path="/contact"
@@ -89,9 +89,9 @@ function App() {
             }
           />
         </Routes>
-       
+
       </div>
-  <Footer />
+      <Footer />
     </Router>
   )
 }
