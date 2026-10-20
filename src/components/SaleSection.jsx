@@ -2,7 +2,7 @@ import React from 'react'
 
 function SaleSection() {
   return (
-    <div>
+    <div >
       <section className="my-8 px-4 max-w-7xl mx-auto" dir="rtl">
   {/* هيدر القسم مع عداد التنازلي */}
   <div className="bg-gradient-to-l from-emerald-800 to-emerald-600 rounded-2xl p-6 text-white flex flex-col md:flex-row justify-between items-center shadow-lg mb-6">

@@ -32,10 +32,10 @@ export default function FAQAccordion() {
 
   return (
     <section className="py-12 bg-white border-t border-slate-100">
-      <div className="container mx-auto px-4 max-w-3xl">
+      <div className="container mx-auto px-4 max-w-3xl" style={{ marginBottom: '2rem' }}>
         {/* Title */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800">
+        <div className="text-center " style={{ marginBottom: '1rem' }}>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800" >
             الأسئلة الشائعة
           </h2>
           <p className="text-sm text-slate-500 mt-2">
@@ -50,7 +50,7 @@ export default function FAQAccordion() {
             return (
               <div
                 key={faq.id}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200"
+                className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 "
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}

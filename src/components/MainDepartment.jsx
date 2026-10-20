@@ -1,5 +1,13 @@
 import React, { useRef , useEffect , useState} from 'react'
-
+import hairlogo from '../assets/img/icon/hairlogo.jpg'
+import skin from '../assets/img/icon/skin.webp'
+import selfcare from '../assets/img/icon/selfcare.jpg'
+import mekup from '../assets/img/icon/mekup.jpg'
+import bodycare from '../assets/img/icon/bodycare.jpg'
+import accessories from '../assets/img/icon/accessories.webp'
+import babycare from '../assets/img/icon/babycare.webp'
+import medical from '../assets/img/icon/medical.png'
+import supp from '../assets/img/icon/supp.webp'
 function MainDepartment() {
   const containerRef = useRef(null);
 const [isAtStart, setIsAtStart] = useState(true);
@@ -36,15 +44,15 @@ useEffect(() => {
   };
 
   const categories = [
-    { id: 1, name: 'العناية بالبشرة', icon: '✨' },
-    { id: 2, name: 'العناية بالشعر', icon: '💇‍♀️' },
-    { id: 3, name: 'المكياج', icon: '💄' },
-    { id: 4, name: 'العناية بالجسم', icon: '🧴' },
-    { id: 5, name: 'العناية الشخصية', icon: '🧼' },
-    { id: 6, name: 'الإكسسوارات', icon: '💍' },
-    { id: 7, name: 'العناية بالأطفال', icon: '👶' },
-    { id: 8, name: 'المستلزمات', icon: '🛍️' },
-    { id: 9, name: 'المكملات', icon: '💊' },
+    { id: 1, name: 'العناية بالبشرة', icon: skin },
+    { id: 2, name: 'العناية بالشعر', icon: hairlogo  },
+    { id: 3, name: 'المكياج', icon: mekup },
+    { id: 4, name: 'العناية بالجسم', icon: bodycare},
+    { id: 5, name: 'العناية الشخصية', icon: selfcare },
+    { id: 6, name: 'الإكسسوارات', icon: accessories },
+    { id: 7, name: 'العناية بالأطفال', icon: babycare },
+    { id: 8, name: 'المستلزمات', icon: medical},
+    { id: 9, name: 'المكملات', icon: supp },
   ];
 
   return (
@@ -84,9 +92,9 @@ useEffect(() => {
                     href="#" 
                     className="min-w-[140px] md:min-w-[170px] group flex flex-col items-center bg-white p-4 rounded-2xl shadow-sm hover:shadow-md active:shadow-md transition-all duration-300 border border-gray-100 hover:border-pink-300 active:border-pink-300 shrink-0 select-none"
                   >
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 group-active:scale-105 transition-transform duration-300">
-                      <span className="text-2xl md:text-3xl">{item.icon}</span>
-                    </div>
+                    <img src={item.icon} className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 group-active:scale-105 transition-transform duration-300">
+                  
+                    </img>
                     <span className="font-semibold text-gray-800 text-sm md:text-base text-center group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
                       {item.name}
                     </span>

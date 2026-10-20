@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 export default function SephoraFooterCustom() {
+  const [selectedCountry, setSelectedCountry] = useState('sa'); // القيمة الافتراضية للسعودية مثلاً
+
+const countries = [
+  { id: 'sa', name: 'السعودية - العربية', flag: '🇸🇦' },
+  { id: 'ae', name: 'الإمارات - العربية', flag: '🇦🇪' },
+  { id: 'global', name: 'Global - English', flag: '🌐' }
+];
   return (
     <footer dir="rtl" className="bg-[#101426] text-slate-300 font-sans pt-6 pb-8 border-t border-slate-800/60 text-right" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
@@ -125,26 +132,32 @@ export default function SephoraFooterCustom() {
             </div>
 
             {/* المنطقة واللغة */}
-            <div >
-              <h3 className="text-white font-bold text-sm border-r-2 border-[#d82274] pr-2">المنطقة واللغة</h3>
-              <div className="space-y-2 pt-1">
-                <button type="button" className="w-full flex items-center justify-between bg-[#1b2038] border border-[#d82274] text-xs py-1.5 px-2.5 rounded text-white">
-                  <span className="flex items-center gap-1.5">
-                    <span>🇸🇦</span>
-                    <span>السعودية - العربية</span>
-                  </span>
-                  <span className="text-[#d82274]">✓</span>
-                </button>
-                <button type="button" className="w-full flex items-center gap-1.5 bg-[#1b2038] border border-slate-700/60 text-xs py-1.5 px-2.5 rounded text-slate-300 hover:text-white active:text-white">
-                  <span>🇦🇪</span>
-                  <span>الإمارات - العربية</span>
-                </button>
-                <button type="button" className="w-full flex items-center gap-1.5 bg-[#1b2038] border border-slate-700/60 text-xs py-1.5 px-2.5 rounded text-slate-300 hover:text-white active:text-white">
-                  <span>🌐</span>
-                  <span>Global - English</span>
-                </button>
-              </div>
-            </div>
+           <div>
+  <h3 className="text-white font-bold text-sm border-r-2 border-[#d82274] pr-2">المنطقة واللغة</h3>
+  <div className="space-y-2 pt-1">
+    {countries.map((country) => {
+      const isSelected = selectedCountry === country.id;
+      return (
+        <button
+          key={country.id}
+          type="button"
+          onClick={() => setSelectedCountry(country.id)}
+          className={`w-full flex items-center cursor-pointer justify-between text-xs py-1.5 px-2.5 rounded transition-all ${
+            isSelected
+              ? 'bg-[#1b2038] border border-[#d82274] text-white'
+              : 'bg-[#1b2038] border border-slate-700/60 text-slate-300 hover:text-white active:text-white'
+          }`}
+        >
+          <span className="flex items-center gap-1.5">
+            <span>{country.flag}</span>
+            <span>{country.name}</span>
+          </span>
+          {isSelected && <span className="text-[#d82274]">✓</span>}
+        </button>
+      );
+    })}
+  </div>
+</div>
 
           </div>
 
@@ -152,30 +165,26 @@ export default function SephoraFooterCustom() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8 pt-4 lg:pt-0 lg:pr-8">
             {/* العنوان الكافي الكلاسيكي */}
             <h2 className="text-3xl sm:text-4xl font-serif text-white leading-tight">
-              نحن نسعي إلى<br />
-              <span className="text-[#d82274] font-bold">شيء جميل</span>
+            عشان احنا هدفنا نكسب ثقتكم ونقدملك حل حقيقي بنختار المنتجات الاصليه المضمونه وكل ده بيتم تحت اشراف نخبه من دكاتره التجميل والمتخصصين<br />
+              <span className="text-[#d82274] font-bold animate-pulse">انضمي الينا الان</span>
             </h2>
 
             {/* صندوق الاشتراك البريدي السريع */}
             <div className="space-y-2">
-              <label htmlFor="newsletterEmail" className="text-xs text-slate-300 font-semibold block" style={{ marginBottom: '5px' }}>
-                اشتركي ليصلك جديد بريد سيفورا
-              </label>
-              <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2">
-                <input
-                  type="email"
-                  id="newsletterEmail"
-                  placeholder="أدخلي بريدك الإلكتروني"
-                  className="flex-1 bg-[#1b2038] text-white placeholder-slate-500 text-xs px-4 py-2.5 rounded border border-slate-700/60 focus:outline-none focus:border-[#d82274] text-right"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#d82274] hover:bg-[#c01a65] active:bg-[#c01a65] text-white text-xs font-bold px-6 py-2.5 rounded transition-colors shrink-0 shadow-md shadow-[#d82274]/20"
-                >
-                  اشتراك
-                </button>
-              </form>
-            </div>
+  <button
+    type="button"
+    onClick={() => {
+      // حط المسار هنا لاحقاً، مثلاً: navigate('/register') أو window.location.href = '/register'
+    }}
+    className="w-full bg-[#d82274] hover:bg-[#c01a65] active:bg-[#a81557] text-white text-xs font-bold py-2.5 px-6 rounded transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md shadow-[#d82274]/20 flex items-center justify-center gap-2 group"
+  >
+    <span>انضمي إلينا الآن</span>
+    {/* أنيميشن بسيط لسهم يتحرك حركة خفيفة جهة اليسار عند الهوفر */}
+    <span className="transition-transform duration-300 transform group-hover:-translate-x-1">
+      ←
+    </span>
+  </button>
+</div>
           </div>
 
         </div>

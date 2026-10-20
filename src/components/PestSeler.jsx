@@ -48,7 +48,7 @@ function PestSeler() {
         </div>
 
         {/* تفاصيل المنتج */}
-        <div className="p-4 flex flex-col flex-grow">
+        <div className="p-4 flex flex-col flex-grow ">
           <span className="text-xs text-gray-400 mb-1">العناية بالبشرة</span>
           <h3 className="font-bold text-gray-800 text-sm md:text-base line-clamp-1 group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
             سيروم الهيالورونيك اسيد المرطب
