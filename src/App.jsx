@@ -49,10 +49,9 @@ function App() {
                 <ProudctSection />
                 <SkinQuizBanner />
                 <RateSection />
-                <FeaturesSection />
                 <BeautyTipsBlog />
                 <FAQAccordion />
-
+                <FeaturesSection />
               </div>
             }
           />
