@@ -73,7 +73,8 @@ function BeautyTipsBlog() {
                   <img 
                     src={article.image} 
                     alt={article.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    // أضفنا group-active لتتفاعل الصورة بلطف عند اللمس بالموبايل
+                    className="w-full h-full object-cover group-hover:scale-105 group-active:scale-95 transition-transform duration-300"
                   />
                 </div>
 
@@ -93,7 +94,8 @@ function BeautyTipsBlog() {
                   <div className="mt-auto pt-4 border-t border-gray-50">
                     <a 
                       href={article.link} 
-                      className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-semibold text-sm transition-colors group"
+                      // أضفنا active لتغيير لون النص عند الضغط على اللينك
+                      className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-800 font-semibold text-sm transition-colors group"
                     >
                       <span>اقرأ المقال كاملاً</span>
                       <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>

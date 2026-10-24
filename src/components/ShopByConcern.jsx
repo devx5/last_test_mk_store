@@ -52,19 +52,19 @@ export default function ShopByConcern() {
           {concerns.map((item) => (
             <div
               key={item.id}
-              className="p-6 rounded-2xl border transition-all duration-300 cursor-pointer text-center bg-cover bg-center overflow-hidden relative group aspect-square flex flex-col justify-end shadow-sm hover:shadow-md"
+              className="p-6 rounded-2xl border transition-all duration-300 cursor-pointer text-center bg-cover bg-center overflow-hidden relative group aspect-square flex flex-col justify-end shadow-sm hover:shadow-md active:shadow-md"
               style={{ backgroundImage: `url(${item.bgImage})` }}
             >
               {/* Overlay تظهر فقط عند الهوفر لتوضيح النص */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* المحتوى مع أنيميشن انزلاق للأعلى وظهور */}
-              <div className="relative z-10 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+              <div className="relative z-10 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
                 <h3 className="font-bold text-white text-lg mb-1">
                   {item.title}
                 </h3>
                 <p className="text-xs text-slate-200 mb-3">{item.description}</p>
-                <a href="#" className="inline-flex items-center gap-1 text-xs font-bold text-pink-300 group-hover:-translate-x-1 transition-transform duration-300">
+                <a href="#" className="inline-flex items-center gap-1 text-xs font-bold text-pink-300 group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform duration-300">
                   <span>استكشفي المنتجات</span>
                   <span>&#8592;</span>
                 </a>

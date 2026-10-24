@@ -2,18 +2,21 @@ import React, { useEffect, useState, useMemo } from 'react';
 import axios from 'axios';
 import { 
   Sparkles, 
-  Scissors, 
-  Smile, 
-  Heart, 
-  UserCheck, 
-  Palette, 
-  Baby, 
-  Pill, 
   Star,
   ShoppingCart,
   Check,
   Filter
 } from 'lucide-react';
+
+import hairlogo from '../assets/img/icon/hairlogo.jpg';
+import skin from '../assets/img/icon/skin.webp';
+import selfcare from '../assets/img/icon/selfcare.jpg';
+import mekup from '../assets/img/icon/mekup.jpg';
+import bodycare from '../assets/img/icon/bodycare.jpg';
+import accessories from '../assets/img/icon/accessories.webp';
+import babycare from '../assets/img/icon/babycare.webp';
+import medical from '../assets/img/icon/medical.png';
+import supp from '../assets/img/icon/supp.webp';
 
 // استدعاء مكونات الفلترة من مجلد sidebar
 import FilterSidebar from './sideBar/FilterSidebar.jsx';
@@ -45,15 +48,17 @@ const ALLProudcts = () => {
     });
   };
 
-  // بيانات الأقسام مع الأيقونات الخاصة بها
+  // بيانات الأقسام مع الصور الخاصة بها
   const categories = [
-    { name: 'العناية بالشعر', icon: <Scissors className="w-6 h-6 text-pink-500" /> },
-    { name: 'العناية بالبشرة', icon: <Smile className="w-6 h-6 text-pink-500" /> },
-    { name: 'العناية بالجسم', icon: <Heart className="w-6 h-6 text-pink-500" /> },
-    { name: 'العناية الشخصية', icon: <UserCheck className="w-6 h-6 text-pink-500" /> },
-    { name: 'المكياج والاكسسوارات', icon: <Palette className="w-6 h-6 text-pink-500" /> },
-    { name: 'العناية بالأطفال', icon: <Baby className="w-6 h-6 text-pink-500" /> },
-    { name: 'المستلزمات والمكملات', icon: <Pill className="w-6 h-6 text-pink-500" /> },
+    { id: 1, name: 'العناية بالبشرة', icon: skin },
+    { id: 2, name: 'العناية بالشعر', icon: hairlogo },
+    { id: 3, name: 'المكياج', icon: mekup },
+    { id: 4, name: 'العناية بالجسم', icon: bodycare },
+    { id: 5, name: 'العناية الشخصية', icon: selfcare },
+    { id: 6, name: 'الإكسسوارات', icon: accessories },
+    { id: 7, name: 'العناية بالأطفال', icon: babycare },
+    { id: 8, name: 'المستلزمات', icon: medical },
+    { id: 9, name: 'المكملات', icon: supp },
   ];
 
   useEffect(() => {
@@ -77,34 +82,50 @@ const ALLProudcts = () => {
       });
   }, []);
 
-  // منطق تصفية المنتجات الحية بناءً على الفلاتر
+  // منطق تصفية وترتيب المنتجات الذكي
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      // 1. فلترة بالبحث بالنص
-      if (
-        filters.searchQuery &&
-        !product.title.toLowerCase().includes(filters.searchQuery.toLowerCase())
-      ) {
+    const query = filters.searchQuery.trim().toLowerCase();
+
+    // 1. تصفية المنتجات (Filtering) باستخدام includes لتشمل البداية والنهاية والمنتصف
+    let result = products.filter((product) => {
+      if (query && !product.title.toLowerCase().includes(query)) {
         return false;
       }
 
-      // 2. فلترة بالقسم
+      // فلترة بالقسم
       if (filters.category !== 'all' && product.category !== filters.category) {
         return false;
       }
 
-      // 3. فلترة بالسعر الأقصى
+      // فلترة بالسعر الأقصى
       if (product.price > filters.maxPrice) {
         return false;
       }
 
-      // 4. فلترة بالماركة
+      // فلترة بالماركة
       if (filters.brands.length > 0 && !filters.brands.includes(product.brand)) {
         return false;
       }
 
       return true;
     });
+
+    // 2. ترتيب النتائج (Sorting): وضع المنتجات التي تبدأ بالحرف في المقدمة أولاً
+    if (query) {
+      result.sort((a, b) => {
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+
+        const startsA = titleA.startsWith(query);
+        const startsB = titleB.startsWith(query);
+
+        if (startsA && !startsB) return -1; // اجعل A في المقدمة
+        if (!startsA && startsB) return 1;  // اجعل B في المقدمة
+        return 0; // اتركهما كما هما إذا تساويا
+      });
+    }
+
+    return result;
   }, [products, filters]);
 
   // دالة لتحديث التقييم عند النقر على نجمة
@@ -136,23 +157,28 @@ const ALLProudcts = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
       
-      {/* 1. سيكشن الأقسام العلوي مع أنيميشن خفيف عند التحويم */}
+      {/* سيكشن الأقسام العلوي */}
       <div className="mb-10 bg-white shadow-md rounded-2xl p-6 border border-gray-100" style={{ marginBottom: '3rem' }}>
         <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2 " style={{ marginBottom: '1rem' }}>
           <Sparkles className="w-6 h-6 text-pink-600 animate-spin" style={{ animationDuration: '4s' }} />
           أقسام المنتجات
         </h2>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {categories.map((cat, index) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-4">
+          {categories.map((cat) => (
             <div 
-              key={index} 
-              className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 active:bg-pink-100 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 group shadow-sm hover:-translate-y-1"
+              key={cat.id} 
+              // تم إضافة hover: و active: هنا للتفاعل الكامل على الموبايل والديسك톱
+              className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 active:bg-pink-100 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 active:border-pink-300 group shadow-sm hover:-translate-y-1 active:translate-y-0"
             >
-              <div className="p-3 bg-white rounded-full shadow-sm mb-3 group-hover:scale-110 group-active:scale-100 transition-transform duration-300">
-                {cat.icon}
+              <div className="w-12 h-12 p-2 bg-white rounded-full shadow-sm mb-3 group-hover:scale-110 group-active:scale-95 transition-transform duration-300 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={cat.icon} 
+                  alt={cat.name} 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
-              <span className="text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600 group-active:text-pink-600">
+              <span className="text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600 group-active:text-pink-700">
                 {cat.name}
               </span>
             </div>
@@ -167,7 +193,8 @@ const ALLProudcts = () => {
         </span>
         <button
           onClick={() => setIsDrawerOpen(true)}
-          className="px-4 py-2.5 bg-pink-600 hover:bg-pink-700 active:bg-pink-700 text-white text-xs font-bold rounded-xl flex items-center gap-2 transition shadow-sm"
+          // إضافة active لتفاعل زر الموبايل
+          className="px-4 py-2.5 bg-pink-600 hover:bg-pink-700 active:bg-pink-800 text-white text-xs font-bold rounded-xl flex items-center gap-2 transition shadow-sm active:scale-95"
         >
           <Filter className="w-4 h-4" />
           تصفية المنتجات
@@ -208,7 +235,8 @@ const ALLProudcts = () => {
               {filteredProducts.map(product => (
                 <div 
                   key={product.id} 
-                  className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5"
+                  // إضافة hover و active لكارت المنتج بالكامل
+                  className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl active:shadow-md transition-all duration-300 hover:-translate-y-1.5 active:translate-y-0"
                 >
                   <div>
                     <div className="overflow-hidden relative">
@@ -216,7 +244,8 @@ const ALLProudcts = () => {
                         style={{ width: '100%', height: '200px', objectFit: 'cover' }}
                         src={product.thumbnail} 
                         alt={product.title} 
-                        className="w-full h-48 object-cover bg-gray-100 transition-transform duration-500 hover:scale-105 active:scale-105"
+                        // إضافة active للصورة لتتفاعل عند اللمس
+                        className="w-full h-48 object-cover bg-gray-100 transition-transform duration-500 hover:scale-105 active:scale-95"
                       />
                     </div>
                     <div className="p-4">
@@ -240,7 +269,8 @@ const ALLProudcts = () => {
                         <button
                           key={star}
                           onClick={() => handleRate(product.id, star)}
-                          className="focus:outline-none transition-transform hover:scale-125"
+                          // إضافة active لنجوم التقييم للمس المباشر
+                          className="focus:outline-none transition-transform hover:scale-125 active:scale-90"
                         >
                           <Star 
                             className={`w-5 h-5 transition-colors duration-200 ${
@@ -253,13 +283,13 @@ const ALLProudcts = () => {
                       ))}
                     </div>
 
-                    {/* زر أضف إلى السلة مع أنيميشن التفاعل */}
+                    {/* زر أضف إلى السلة مع تفاعل الـ active */}
                     <button 
                       onClick={() => handleAddToCart(product)}
                       className={`w-full mt-2 font-medium py-2.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-sm active:scale-95 ${
                         addedItems[product.id]
-                          ? 'bg-green-600 hover:bg-green-700 text-white scale-105 shadow-green-200'
-                          : 'bg-pink-600 hover:bg-pink-700 text-white shadow-pink-100 hover:shadow-md'
+                          ? 'bg-green-600 hover:bg-green-700 active:bg-green-800 text-white scale-105 shadow-green-200'
+                          : 'bg-pink-600 hover:bg-pink-700 active:bg-pink-800 text-white shadow-pink-100 hover:shadow-md'
                       }`}
                     >
                       {addedItems[product.id] ? (
@@ -287,5 +317,7 @@ const ALLProudcts = () => {
     </div>
   );
 };
+
+export class ALLProducts {}
 
 export default ALLProudcts;
