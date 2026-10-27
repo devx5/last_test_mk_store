@@ -69,8 +69,8 @@ function PestSeler() {
               <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
             </a>
 
-            <div>
-              <div className="flex items-center gap-2">
+            <div >
+              <div  className="flex items-center  gap-2">
                 <span className="text-2xl" style={{marginBottom:'10px'}}>🔥</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800" style={{ marginBottom: '1rem' }}>
                   الأكثر طلباً ومبيعاً
@@ -122,7 +122,7 @@ function PestSeler() {
                         <span className="text-gray-400 text-xs line-through mr-2">{product.oldPrice}</span>
                       )}
                     </div>
-                    <button className="bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
+                    <button className="bg-pink-50 hover:bg-pink-600 active:bg-pink-600 text-pink-600 hover:text-white active:text-white p-2.5 rounded-xl transition-colors duration-300" title="إضافة للسلة">
                       <span className="text-lg">🛒</span>
                     </button>
                   </div>
@@ -132,6 +132,7 @@ function PestSeler() {
 
           </div>
         </div>
+      
       </section>
     </div>
   )

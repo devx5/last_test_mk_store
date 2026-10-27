@@ -4,7 +4,7 @@ export default function SkinQuizBanner() {
   return (
     <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 p-8 sm:p-12 text-white shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl bg-pink-600 p-8 sm:p-12 text-white shadow-xl">
           
           {/* دوائر خلفية جمالية */}
           <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-2xl pointer-events-none" />
@@ -12,7 +12,7 @@ export default function SkinQuizBanner() {
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
             {/* الشارة العلوية */}
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs sm:text-sm font-semibold mb-4 border border-white/30">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs sm:text-sm font-semibold mb-4 border border-white/30 " style={{marginBottom: "9px"}}>
               ✨ مستشار التجميل الذكي
             </span>
 
@@ -22,7 +22,7 @@ export default function SkinQuizBanner() {
             </h2>
 
             {/* الوصف */}
-            <p className="text-pink-100 text-sm sm:text-base mb-8 leading-relaxed">
+            <p className="text-pink-100 text-sm sm:text-base mb-8 leading-relaxed" style={{marginTop: "9px" , marginBottom:"9px"}}>
               أجيبي عن 4 أسئلة بسيطة خلال دقيقة واحدة، وسنقوم بتحليل احتياج بشرتك وترشيح المنتجات المثالية لكِ بدقة.
             </p>
 

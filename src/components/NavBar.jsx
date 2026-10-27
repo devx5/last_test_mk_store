@@ -96,7 +96,7 @@ const [showNavbar, setShowNavbar] = useState(true);
                   placeholder="البحث عن المنتجات" 
                   className="w-full bg-gray-100 text-sm text-gray-800 rounded-full py-2 pr-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-transparent"
                 />
-                <button className="absolute left-3 top-2.5 text-blue-600 hover:text-blue-800">
+                <button className="absolute left-3 top-2 text-blue-600 hover:text-blue-800">
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
@@ -119,22 +119,22 @@ const [showNavbar, setShowNavbar] = useState(true);
               </a>
 
               {/* Fast Support / Call (Desktop) */}
-              {/* <div className="hidden xl:flex items-center gap-1.5 text-xs text-gray-600 border-r pr-4 border-gray-200">
+               {/* <div className="hidden xl:flex items-center gap-1.5 text-xs text-gray-600 border-r pr-4 border-gray-200">
                 <div className="text-left">
                   <span className="block text-[10px] text-gray-400">دعم سريع</span>
                   <span className="font-semibold">بحمتك</span>
                 </div>
                 <i className="fa-solid fa-headset text-blue-600 text-lg"></i>
-              </div> */}
+              </div>  */}
 
               {/* Fast Shipping (Desktop) */}
-              <div className="hidden xl:flex items-center gap-1.5 text-xs text-gray-600 border-r pr-4 border-gray-200">
+              {/* <div className="hidden xl:flex items-center gap-1.5 text-xs text-gray-600 border-r pr-4 border-gray-200">
                 <div className="text-left">
                   <span className="block text-center text-[10px] text-gray-400">متوفر شحن</span>
                   <span className="font-semibold">لكافه المحافظات</span>
                 </div>
                 <i className="fa-solid fa-globe text-blue-600 text-lg"></i>
-              </div>
+              </div> */}
 
               {/* Mobile Search Button */}
               <button 

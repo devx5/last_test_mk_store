@@ -56,7 +56,7 @@ export default function ShopByConcern() {
               style={{ backgroundImage: `url(${item.bgImage})` }}
             >
               {/* Overlay تظهر فقط عند الهوفر لتوضيح النص */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-active:opacity-100 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* المحتوى مع أنيميشن انزلاق للأعلى وظهور */}
               <div className="relative z-10 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">

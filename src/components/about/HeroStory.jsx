@@ -1,5 +1,5 @@
 import React from 'react';
-
+import mekkah from '../../assets/img/mekkah.png'
 export default function HeroStory() {
   return (
     <section className="py-16 bg-slate-50 relative overflow-hidden">
@@ -24,9 +24,9 @@ export default function HeroStory() {
           {/* الصورة أو البانر التوضيحي */}
           <div className="relative">
             <div className="aspect-4/3 rounded-3xl bg-gradient-to-tr from-pink-200 via-rose-100 to-amber-100 flex items-center justify-center text-6xl shadow-xl border border-white p-8">
-              ✨ 💄 🌿
+             <img className='w-full h-full' src={mekkah} alt="" />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hidden sm:block">
+            <div className="animate-bounce absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hidden sm:block">
               <p className="text-2xl font-black text-pink-600">100%</p>
               <p className="text-xs text-slate-500 font-bold">منتجات أصلية ومضمونة</p>
             </div>

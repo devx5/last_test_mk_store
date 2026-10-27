@@ -74,7 +74,7 @@ const [showAll, setShowAll] = useState(false);
   {(showAll ? reviews : reviews.slice(0, 3)).map((review) => (
     <div
       key={review.id}
-      className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:shadow-xl relative border border-gray-100 flex flex-col justify-between"
+      className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:shadow-xl active:-translate-y-2 relative border border-gray-100 flex flex-col justify-between"
     >
       <div className="absolute top-2 left-2 text-emerald-600 opacity-20">
         <Quote size={40} />
@@ -82,7 +82,7 @@ const [showAll, setShowAll] = useState(false);
       
       <div>
         {/* نجوم العرض */}
-        <div className="flex space-x-1 space-x-reverse mb-4 justify-end">
+        <div className="flex space-x-1 space-x-reverse mb-4 justify-end hover:scale-125 active:scale-90">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}

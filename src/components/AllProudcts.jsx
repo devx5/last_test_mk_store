@@ -7,7 +7,7 @@ import {
   Check,
   Filter
 } from 'lucide-react';
-
+  // الصور
 import hairlogo from '../assets/img/icon/hairlogo.jpg';
 import skin from '../assets/img/icon/skin.webp';
 import selfcare from '../assets/img/icon/selfcare.jpg';
@@ -17,6 +17,10 @@ import accessories from '../assets/img/icon/accessories.webp';
 import babycare from '../assets/img/icon/babycare.webp';
 import medical from '../assets/img/icon/medical.png';
 import supp from '../assets/img/icon/supp.webp';
+
+// استدعاء التحمليل
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 // استدعاء مكونات الفلترة من مجلد sidebar
 import FilterSidebar from './sideBar/FilterSidebar.jsx';
@@ -146,10 +150,46 @@ const ALLProudcts = () => {
     }, 2000);
   };
 
-  if (loading) {
+ if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[400px]">
-        <p className="text-lg font-medium text-gray-600 animate-pulse">جاري التحميل...</p>
+      <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
+        {/* شيبه سيكشن الأقسام والـ Header عشان الصفحة متهتزش */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {[...Array(6)].map((_, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
+            >
+              <div>
+                {/* مكان صورة الكارد */}
+                <div className="mb-4">
+                  <Skeleton height={192} borderRadius={12} />
+                </div>
+                {/* مكان عنوان المنتج والسعر */}
+                <div className="mb-3">
+                  <Skeleton height={20} width="80%" style={{ marginBottom: '8px' }} />
+                  <Skeleton height={16} width="35%" />
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-gray-100 flex flex-col gap-3">
+                {/* مكان التقييم الحالي */}
+                <div className="flex items-center justify-between">
+                  <Skeleton height={14} width="30%" />
+                  <Skeleton height={14} width="20%" />
+                </div>
+                {/* مكان نجوم التقييم */}
+                <div className="flex justify-center gap-1 my-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Skeleton key={i} circle width={20} height={20} />
+                  ))}
+                </div>
+                {/* مكان زر أضف إلى السلة */}
+                <Skeleton height={40} borderRadius={12} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
@@ -171,14 +211,14 @@ const ALLProudcts = () => {
               // تم إضافة hover: و active: هنا للتفاعل الكامل على الموبايل والديسك톱
               className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 active:bg-pink-100 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 active:border-pink-300 group shadow-sm hover:-translate-y-1 active:translate-y-0"
             >
-              <div className="w-12 h-12 p-2 bg-white rounded-full shadow-sm mb-3 group-hover:scale-110 group-active:scale-95 transition-transform duration-300 flex items-center justify-center overflow-hidden">
+              <div className="w-20 h-20  bg-white rounded-full shadow-sm  group-hover:scale-110 group-active:scale-95 transition-transform duration-300 flex items-center justify-center overflow-hidden" style={{marginBottom: "10px"}}>
                 <img 
                   src={cat.icon} 
                   alt={cat.name} 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              <span className="text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600 group-active:text-pink-700">
+              <span className=" text-xs sm:text-sm font-medium text-gray-700 text-center group-hover:text-pink-600 group-active:text-pink-700">
                 {cat.name}
               </span>
             </div>
@@ -286,7 +326,7 @@ const ALLProudcts = () => {
                     {/* زر أضف إلى السلة مع تفاعل الـ active */}
                     <button 
                       onClick={() => handleAddToCart(product)}
-                      className={`w-full mt-2 font-medium py-2.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-sm active:scale-95 ${
+                      className={`w-full mt-2 font-medium py-2.5 cursor-pointer px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-sm active:scale-95 ${
                         addedItems[product.id]
                           ? 'bg-green-600 hover:bg-green-700 active:bg-green-800 text-white scale-105 shadow-green-200'
                           : 'bg-pink-600 hover:bg-pink-700 active:bg-pink-800 text-white shadow-pink-100 hover:shadow-md'
@@ -299,7 +339,7 @@ const ALLProudcts = () => {
                         </>
                       ) : (
                         <>
-                          <ShoppingCart className="w-4 h-4 transition-transform group-hover:rotate-12 group-active:rotate-12" />
+                          <ShoppingCart className="w-4 h-4 transition-transform group-hover:rotate-12 group-active:rotate-12 " />
                           أضف إلى السلة
                         </>
                       )}
@@ -318,6 +358,6 @@ const ALLProudcts = () => {
   );
 };
 
-export class ALLProducts {}
+
 
 export default ALLProudcts;
