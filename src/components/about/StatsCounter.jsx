@@ -9,7 +9,7 @@ const stats = [
 
 export default function StatsCounter() {
   return (
-    <section className="py-12 bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 text-white relative overflow-hidden shadow-inner">
+    <section className="py-12 bg-pink-600 text-white relative overflow-hidden shadow-inner">
       {/* خلفية جمالية */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />

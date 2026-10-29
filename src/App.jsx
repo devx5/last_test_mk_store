@@ -26,7 +26,7 @@ import ContactHero from './components/contact/ContactHero.jsx';
 import ContactForm from './components/contact/ContactForm.jsx';
 import ContactInfoCard from './components/contact/ContactInfoCard.jsx';
 import ReturnPolicyPage from './components/returnpolixy/ReturnPolicyPage.jsx';
-
+import Cart from './components/Cart.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -57,6 +57,7 @@ function App() {
               </div>
             }
           />
+         <Route path="/cart" element={<Cart/>} />
           <Route
             path="/all-products"
             element={

@@ -105,13 +105,13 @@ const [showNavbar, setShowNavbar] = useState(true);
             {/* Right Action Icons (Cart, Account, Support, Shipping) */}
             <div className="flex items-center space-x-1 space-x-reverse">
               {/* Cart */}
-              <div className="flex items-center gap-1 bg-gray-50 border border-gray-200 rounded-md px-2.5 py-1.5 cursor-pointer hover:bg-gray-100 transition">
+              <Link to="/cart" className="flex items-center gap-1 bg-gray-50 border border-gray-200 rounded-md px-2.5 py-1.5 cursor-pointer hover:bg-gray-100 transition">
                 <span className="text-xs font-semibold text-gray-700">EGP 0.00</span>
                 <div className="relative bg-blue-600 text-white rounded p-1">
                   <i className="fa-solid fa-cart-shopping text-xs"></i>
                   <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
                 </div>
-              </div>
+              </Link>
 
               {/* User Account */}
               <a href="#" className="hidden sm:flex text-gray-600 hover:text-blue-600 p-2 items-center justify-center rounded-full hover:bg-gray-100">
