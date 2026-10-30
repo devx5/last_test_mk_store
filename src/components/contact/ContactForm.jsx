@@ -33,10 +33,11 @@ return (
 <form onSubmit={handleSubmit} className="space-y-4">
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
-<label className="block text-xs font-bold text-slate-700 mb-1">
+<label className="block text-xs font-bold text-slate-700 mb-1 text-right " style={{margin:"9px"}}>
 الاسم بالكامل
 </label>
 <input
+style={{textAlign:"right"}}
 type="text"
 required
 placeholder="مثال: سارة محمد"
@@ -48,10 +49,11 @@ className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-non
 />
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-700 mb-1">
+<label className="block text-xs font-bold text-slate-700 mb-1 text-right" style={{margin:"9px"}}>
 رقم الهاتف
 </label>
 <input
+style={{textAlign:"right"}}
 type="tel"
 required
 placeholder="01000000000"
@@ -64,10 +66,11 @@ className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-non
 </div>
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-700 mb-1">
+<label className="block text-xs font-bold text-slate-700 mb-1 text-right" style={{margin:"9px"}}>
 البريد الإلكتروني
 </label>
 <input
+style={{textAlign:"right"}}
 type="email"
 required
 placeholder="example@mail.com"
@@ -79,10 +82,11 @@ className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-non
 />
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-700 mb-1">
+<label className="block text-xs font-bold text-slate-700 mb-1 text-right" style={{margin:"9px"}}>
 سبب التواصل
 </label>
 <select
+style={{textAlign:"right"}}
 value={formData.subject}
 onChange={(e) =>
 setFormData({ ...formData, subject: e.target.value })
@@ -96,10 +100,11 @@ className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-non
 </select>
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-700 mb-1">
+<label className="block text-xs font-bold text-slate-700 mb-1 text-right" style={{margin:"9px"}}>
 الرسالة
 </label>
 <textarea
+style={{textAlign:"right"}}
 rows="4"
 required
 placeholder="اكتبي تفاصيل استفساركِ هنا..."

@@ -5,8 +5,8 @@ function SaleSection() {
     <div >
       <section className="my-8 px-4 max-w-7xl mx-auto" dir="rtl">
   {/* هيدر القسم مع عداد التنازلي */}
-  <div className="bg-gradient-to-l from-emerald-800 to-emerald-600 rounded-2xl p-6 text-white flex flex-col md:flex-row justify-between items-center shadow-lg mb-6">
-    <div className="mb-4 md:mb-0">
+  <div className="bg-gradient-to-l from-emerald-800  to-emerald-600 rounded-2xl p-6 text-white flex flex-col md:flex-row justify-between items-center shadow-lg mb-6">
+    <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start text-center md:text-right">
       <span className="bg-amber-400 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
         عرض لفترة محدودة ⏳
       </span>

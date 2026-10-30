@@ -68,7 +68,7 @@ export default function CoreValues() {
               >
                 {item.icon}
               </div>
-              <h3 className="font-bold text-slate-800 text-lg mb-2">
+              <h3 className="font-bold text-slate-800 text-lg mb-2 text-right">
                 {item.title}
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">

@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import axios from 'axios';
+import React, { useContext, useState, useMemo } from 'react';
 import { 
   Sparkles, 
   Star,
@@ -18,6 +17,9 @@ import babycare from '../assets/img/icon/babycare.webp';
 import medical from '../assets/img/icon/medical.png';
 import supp from '../assets/img/icon/supp.webp';
 
+// استدعاء الكونتكست العام للمنتجات (عدل المسار حسب مكان الملف عندك)
+import { ProductsContext } from '../context/ProductContext.jsx'; 
+
 // استدعاء مكونات الفلترة من مجلد sidebar
 import FilterSidebar from './sideBar/FilterSidebar.jsx';
 import FilterDrawer from './sideBar/FilterDrawer.jsx';
@@ -26,8 +28,9 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 const ALLProudcts = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  //  جلبنا المنتجات وحالة التحميل من الكونتكست مباشرة 
+  const { products, loading } = useContext(ProductsContext);
+
   const [ratings, setRatings] = useState({});
   const [addedItems, setAddedItems] = useState({});
 
@@ -64,32 +67,13 @@ const ALLProudcts = () => {
     { id: 9, name: 'المكملات', icon: supp },
   ];
 
-  useEffect(() => {
-    // جلب منتجات التجميل من DummyJSON
-    axios.get('https://dummyjson.com/products')
-      .then(response => {
-        setProducts(response.data.products);
-        
-        // تعيين التقييمات الابتدائية القادمة من الـ API
-        const initialRatings = {};
-        response.data.products.forEach(prod => {
-          initialRatings[prod.id] = Math.round(prod.rating || 0);
-        });
-        setRatings(initialRatings);
-        
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
+  // (تم الاستغناء عن useEffect الـ axios هنا لأنه أصبح في الكونتكست العام بالخارج)
 
   // منطق تصفية وترتيب المنتجات الذكي
   const filteredProducts = useMemo(() => {
     const query = filters.searchQuery.trim().toLowerCase();
 
-    // 1. تصفية المنتجات (Filtering) باستخدام includes لتشمل البداية والنهاية والمنتصف
+    // تصفية المنتجات (Filtering) باستخدام includes لتشمل البداية والنهاية والمنتصف
     let result = products.filter((product) => {
       if (query && !product.title.toLowerCase().includes(query)) {
         return false;
@@ -170,7 +154,7 @@ const ALLProudcts = () => {
                      <Skeleton height={16} width="35%" />
                    </div>
                  </div>
-   
+    
                  <div className="pt-3 border-t border-gray-100 flex flex-col gap-3">
                    {/* مكان التقييم الحالي */}
                    <div className="flex items-center justify-between">
@@ -191,7 +175,7 @@ const ALLProudcts = () => {
            </div>
          </div>
        );
-     }
+    }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
@@ -207,7 +191,6 @@ const ALLProudcts = () => {
           {categories.map((cat) => (
             <div 
               key={cat.id} 
-              // تم إضافة hover: و active: هنا للتفاعل الكامل على الموبايل والديسك톱
               className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-pink-50 active:bg-pink-100 rounded-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-pink-200 active:border-pink-300 group shadow-sm hover:-translate-y-1 active:translate-y-0"
             >
               <div className="w-20 h-20  bg-white rounded-full shadow-sm  group-hover:scale-110 group-active:scale-95 transition-transform duration-300 flex items-center justify-center overflow-hidden" style={{marginBottom: "10px"}}>
@@ -232,7 +215,6 @@ const ALLProudcts = () => {
         </span>
         <button
           onClick={() => setIsDrawerOpen(true)}
-          // إضافة active لتفاعل زر الموبايل
           className="px-4 py-2.5 bg-pink-600 hover:bg-pink-700 active:bg-pink-800 text-white text-xs font-bold rounded-xl flex items-center gap-2 transition shadow-sm active:scale-95"
         >
           <Filter className="w-4 h-4" />
@@ -274,7 +256,6 @@ const ALLProudcts = () => {
               {filteredProducts.map(product => (
                 <div 
                   key={product.id} 
-                  // إضافة hover و active لكارت المنتج بالكامل
                   className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl active:shadow-md transition-all duration-300 hover:-translate-y-1.5 active:translate-y-0"
                 >
                   <div>
@@ -283,11 +264,10 @@ const ALLProudcts = () => {
                         style={{ width: '100%', height: '200px', objectFit: 'cover' }}
                         src={product.thumbnail} 
                         alt={product.title} 
-                        // إضافة active للصورة لتتفاعل عند اللمس
                         className="w-full h-48 object-cover bg-gray-100 transition-transform duration-500 hover:scale-105 active:scale-95"
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 text-left">
                       <h3 className="font-bold text-gray-800 text-base mb-1 truncate">{product.title}</h3>
                       <p className="text-pink-600 font-semibold mb-3">${product.price}</p>
                     </div>
@@ -308,7 +288,6 @@ const ALLProudcts = () => {
                         <button
                           key={star}
                           onClick={() => handleRate(product.id, star)}
-                          // إضافة active لنجوم التقييم للمس المباشر
                           className="focus:outline-none transition-transform hover:scale-125 active:scale-90"
                         >
                           <Star 
@@ -322,9 +301,9 @@ const ALLProudcts = () => {
                       ))}
                     </div>
 
-                    {/* زر أضف إلى السلة مع تفاعل الـ active */}
-                    
+                    {/* زر أضف إلى السلة */}
                     <button 
+                    
                       onClick={() => handleAddToCart(product)}
                       className={`w-full mt-2 font-medium py-2.5 cursor-pointer px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-sm active:scale-95 ${
                         addedItems[product.id]
@@ -357,7 +336,5 @@ const ALLProudcts = () => {
     </div>
   );
 };
-
-
 
 export default ALLProudcts;

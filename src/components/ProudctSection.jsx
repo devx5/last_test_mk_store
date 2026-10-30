@@ -1,37 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const BeautyProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  // حالة لتخزين التقييمات التفاعلية لكل منتج حسب الـ ID
+// 1. استدعاء الكونتكست العام (عدل المسار حسب مكان الملف عندك)
+import { ProductsContext } from '../context/ProductContext';
+
+const ProductsSection = () => {
+  // 2. جلب المنتجات وحالة التحميل من الكونتكست مباشرة
+  const { products, loading } = useContext(ProductsContext);
+
   const [ratings, setRatings] = useState({});
   const [addedItems, setAddedItems] = useState({});
-
-  useEffect(() => {
-    // جلب منتجات التجميل فقط من DummyJSON
-    axios.get('https://dummyjson.com/products')
-      .then(response => {
-        // مصفوفة المنتجات داخل الـ response.data.products
-        setProducts(response.data.products);
-
-        // تعيين التقييمات الابتدائية القادمة من الـ API
-        const initialRatings = {};
-        response.data.products.forEach(prod => {
-          initialRatings[prod.id] = Math.round(prod.rating || 0);
-        });
-        setRatings(initialRatings);
-
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
 
   // دالة لتحديث التقييم عند النقر على نجمة
   const handleRate = (productId, newRating) => {
@@ -41,7 +21,7 @@ const BeautyProducts = () => {
     }));
   };
 
-    const handleAddToCart = (product) => {
+  const handleAddToCart = (product) => {
     setAddedItems(prev => ({ ...prev, [product.id]: true }));
 
     // إرجاع الزر لحالته الطبيعية بعد ثانيتين
@@ -53,7 +33,6 @@ const BeautyProducts = () => {
   if (loading) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
-        {/* شيبه سيكشن الأقسام والـ Header عشان الصفحة متهتزش */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[...Array(6)].map((_, index) => (
             <div
@@ -61,11 +40,9 @@ const BeautyProducts = () => {
               className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
             >
               <div>
-                {/* مكان صورة الكارد */}
                 <div className="mb-4">
                   <Skeleton height={192} borderRadius={12} />
                 </div>
-                {/* مكان عنوان المنتج والسعر */}
                 <div className="mb-3">
                   <Skeleton height={20} width="80%" style={{ marginBottom: '8px' }} />
                   <Skeleton height={16} width="35%" />
@@ -73,18 +50,15 @@ const BeautyProducts = () => {
               </div>
 
               <div className="pt-3 border-t border-gray-100 flex flex-col gap-3">
-                {/* مكان التقييم الحالي */}
                 <div className="flex items-center justify-between">
                   <Skeleton height={14} width="30%" />
                   <Skeleton height={14} width="20%" />
                 </div>
-                {/* مكان نجوم التقييم */}
                 <div className="flex justify-center gap-1 my-1">
                   {[...Array(5)].map((_, i) => (
                     <Skeleton key={i} circle width={20} height={20} />
                   ))}
                 </div>
-                {/* مكان زر أضف إلى السلة */}
                 <Skeleton height={40} borderRadius={12} />
               </div>
             </div>
@@ -101,7 +75,7 @@ const BeautyProducts = () => {
       {/* شبكة الكروت المتجاوبة */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-h-[900px] lg:max-h-[920px] overflow-hidden transition-all duration-500 ">
         {products.map((product) => {
-          const currentRating = ratings[product.id] || 0;
+          const currentRating = ratings[product.id] || Math.round(product.rating || 0);
 
           return (
             <div
@@ -111,13 +85,13 @@ const BeautyProducts = () => {
               {/* صورة المنتج */}
               <div className="overflow-hidden relative bg-gray-50 h-52">
                 <img
-                  src={product.thumbnail} // رابط الصورة المصغرة من الـ API
+                  src={product.thumbnail}
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-500"
                 />
               </div>
 
-              {/* تفاصيل المنتج (العنوان والوصف) */}
+              {/* تفاصيل المنتج */}
               <div className="p-4 flex-1 flex flex-col justify-between ">
                 <div>
                   <h3 className="font-bold text-gray-800 text-lg mb-1">{product.title}</h3>
@@ -132,7 +106,7 @@ const BeautyProducts = () => {
                 </div>
               </div>
 
-              {/* النجوم التفاعلية الذهبية فوق زر تسوق الآن مباشرة */}
+              {/* النجوم التفاعلية */}
               <div className="px-4 pb-2 flex items-center justify-center gap-1 dir-ltr">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
@@ -149,28 +123,28 @@ const BeautyProducts = () => {
               </div>
 
               {/* زر تسوق الآن */}
-             <div className="p-4 pt-0">
-  <button
-    onClick={() => handleAddToCart(product)}
-   className={`w-full text-white py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
-  addedItems[product.id]
-    ? 'bg-green-600 hover:bg-green-700 active:bg-green-700'
-    : 'bg-pink-600 hover:bg-pink-700 active:bg-pink-700'
-}`}
-  >
-    {addedItems[product.id] ? (
-      <>
-        <span>تمت الإضافة بنجاح!</span>
-        <i className="fa-solid fa-check" style={{ color: "rgb(255, 255, 255)" }}></i>
-      </>
-    ) : (
-      <>
-        <span>تسوق الآن</span>
-        <i className="fa-solid fa-cart-shopping" style={{ color: "rgb(255, 255, 255)" }}></i>
-      </>
-    )}
-  </button>
-</div>
+              <div className="p-4 pt-0">
+                <button
+                  onClick={() => handleAddToCart(product)}
+                  className={`w-full text-white py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
+                    addedItems[product.id]
+                      ? 'bg-green-600 hover:bg-green-700 active:bg-green-700'
+                      : 'bg-pink-600 hover:bg-pink-700 active:bg-pink-700'
+                  }`}
+                >
+                  {addedItems[product.id] ? (
+                    <>
+                      <span>تمت الإضافة بنجاح!</span>
+                      <i className="fa-solid fa-check" style={{ color: "rgb(255, 255, 255)" }}></i>
+                    </>
+                  ) : (
+                    <>
+                      <span>تسوق الآن</span>
+                      <i className="fa-solid fa-cart-shopping" style={{ color: "rgb(255, 255, 255)" }}></i>
+                    </>
+                  )}
+                </button>
+              </div>
 
             </div>
           );
@@ -192,4 +166,4 @@ const BeautyProducts = () => {
   );
 };
 
-export default BeautyProducts;
+export default ProductsSection;

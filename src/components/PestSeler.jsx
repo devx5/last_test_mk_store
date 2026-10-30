@@ -131,21 +131,25 @@ function PestSeler() {
       <section className="py-12 bg-white" style={{ marginTop: '20px' }}>
         <div className="container mx-auto px-4">
           
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-            <Link to="/all-products" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-700 font-semibold text-sm transition-colors group">
+         <div className="flex flex-row justify-between items-center mb-8 gap-4 w-full">
+            
+            {/* زر عرض كل المنتجات (هيروح على الشمال في الشاشات الصغيرة والكبيرة) */}
+            <Link to="/all-products" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-700 font-semibold text-sm transition-colors group flex-shrink-0">
               <span>عرض كل المنتجات</span>
               <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
             </Link>
 
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl" style={{marginBottom:'10px'}}>🔥</span>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800" style={{ marginBottom: '1rem' }}>
+            {/* العنوان والبرجراف (هيروحوا على اليمين تماماً) */}
+            <div className="text-right">
+              <div className="flex items-center justify-end gap-2">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
                   الأكثر طلباً ومبيعاً
                 </h2>
+                <span className="text-xl sm:text-2xl">🔥</span>
               </div>
-              <p className="text-gray-500 text-sm mt-1">المنتجات الأكثر ثقة وطلباً من عملائنا المميزين</p>
+              <p className="text-gray-500 text-xs sm:text-sm mt-1">المنتجات الأكثر ثقة وطلباً من عملائنا المميزين</p>
             </div>
+            
           </div>
           
           <div className="relative px-8 md:px-12">
