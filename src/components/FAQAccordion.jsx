@@ -54,9 +54,9 @@ export default function FAQAccordion() {
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full text-right p-5 bg-slate-50/50 hover:bg-slate-50 active:bg-slate-50 flex items-center justify-between gap-4 font-bold text-slate-800 text-sm sm:text-base cursor-pointer"
+                  className="w-full text-right p-5 bg-slate-50/50 hover:bg-slate-50 active:bg-slate-50 flex flex-row-reverse items-center justify-between gap-4 font-bold text-slate-800 text-sm sm:text-base cursor-pointer"
                 >
-                  <span>{faq.question}</span>
+                  <span >{faq.question}</span>
                   <span
                     className={`transform transition-transform duration-300 text-pink-600 ${
                       isOpen ? 'rotate-180' : 'rotate-0'
@@ -67,7 +67,7 @@ export default function FAQAccordion() {
                 </button>
 
                 {isOpen && (
-                  <div className="p-5 bg-white border-t border-slate-100 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  <div className="flex flex-row-reverse p-5 bg-white border-t border-slate-100 text-slate-600 text-xs sm:text-sm leading-relaxed ">
                     {faq.answer}
                   </div>
                 )}

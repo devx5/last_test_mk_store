@@ -23,8 +23,17 @@ const { products } = useContext(ProductsContext);
   const allProducts = products || [];;
 
   // دالة البحث الذكي والترتيب (البداية أولاً ثم المنتصف) باستخدام خصائص API الصحيحة (title, thumbnail)
+ // دالة البحث الذكي مع تقنية الـ Debounce (تأخير زمني لمنع كثرة الطلبات)
   useEffect(() => {
-    if (searchTerm.trim() !== '') {
+    // لو خانة البحث فاضية، نفذ فوراً وقفل النتائج
+    if (searchTerm.trim() === '') {
+      setSearchResults([]);
+      setIsSearchOpen(false);
+      return;
+    }
+
+    // نعمل Timer يستنى 300 مللي ثانية بعد آخر حرف كتبه المستخدم
+    const delayDebounceFn = setTimeout(() => {
       const query = searchTerm.toLowerCase();
       
       const matched = allProducts.filter((p) => {
@@ -45,10 +54,11 @@ const { products } = useContext(ProductsContext);
 
       setSearchResults(matched);
       setIsSearchOpen(true);
-    } else {
-      setSearchResults([]);
-      setIsSearchOpen(false);
-    }
+    }, 500); // المهلة الزمنية (300 مللي ثانية)
+
+    // يلغي الـ Timer القديم لو المستخدم كتب حرف جديد قبل انتهاء المهلة
+    return () => clearTimeout(delayDebounceFn);
+
   }, [searchTerm, allProducts]);
 
   // إغلاق قائمة البحث عند الضغط خارجها
@@ -296,27 +306,27 @@ const { products } = useContext(ProductsContext);
         {/* Mobile Menu Drawer / Dropdown */}
         {isMobileMenuOpen && (
           <div ref={mobileMenuRef} className="xl:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2">
-            <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">الرئيسية</Link>
-            <Link to="/Companies" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">قائمة الشركات</Link>
-            <Link to="/all-products" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">كل المنتجات</Link>
-            <Link to="/About" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">الرئيسية</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/Companies" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">قائمة الشركات</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/all-products" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">كل المنتجات</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/About" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">من نحن</Link>
             <div className="relative group cursor-pointer">
               <div className="flex items-center gap-1 hover:text-blue-600 transition">
                 <span>الأقسام</span>
                 <i className="fa-solid fa-chevron-down text-xs"></i>
               </div>
               <div className="absolute top-full right-0 w-48 bg-white shadow-xl rounded-md py-2 border border-gray-100 hidden group-hover:block z-50">
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالشعر</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالبشرة</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالجسم</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية الشخصية</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المكياج والاكسسوارات</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالأطفال</a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المستلزمات والمكملات</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالشعر</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالبشرة</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالجسم</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية الشخصية</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المكياج والاكسسوارات</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">العناية بالأطفال</a>
+                <a onClick={() => setIsMobileMenuOpen(false)} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">المستلزمات والمكملات</a>
               </div>
             </div>
-            <Link to="/ReturnPolicy" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">سياسة الاستبدال والاسترجاع</Link>
-            <Link to="/Contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">اتصل بنا</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/ReturnPolicy" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">سياسة الاستبدال والاسترجاع</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/Contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">اتصل بنا</Link>
           </div>
         )}
       </header>

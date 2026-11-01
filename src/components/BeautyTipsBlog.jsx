@@ -80,7 +80,7 @@ function BeautyTipsBlog() {
 
                 {/* محتوى المقال */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <div className="text-gray-400 text-xs mb-2 flex gap-2 items-center">
+                  <div className="text-gray-400 text-xs mb-2 flex flex-row-reverse gap-2 items-center">
                     <span>{article.date}</span>
                     <span>•</span>
                     <span>{article.readTime}</span>

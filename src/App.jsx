@@ -6,7 +6,7 @@ import Header from './components/Header.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import ProudctSection from './components/ProudctSection.jsx';
 import AllProudcts from './components/AllProudcts.jsx';
-import RateSection from './components/RateSection.jsx'
+import RateSection from './components/rate/RateSection.jsx';
 import FeaturesSection from './components/FeaturesSection.jsx';
 import SaleSection from './components/SaleSection.jsx';
 import Footer from './components/Footer.jsx';

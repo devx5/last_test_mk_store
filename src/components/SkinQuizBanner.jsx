@@ -28,8 +28,8 @@ export default function SkinQuizBanner() {
 
             {/* زر البدء */}
             <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-pink-600 font-bold rounded-2xl shadow-lg hover:bg-pink-50 hover:scale-105 transition-all duration-300 active:scale-95 text-sm sm:text-base cursor-pointer">
-              <span>ابدأي اختبار البشرة الآن</span>
               <span>&#8592;</span>
+              <span>ابدأي اختبار البشرة الآن</span>
             </button>
           </div>
         </div>
