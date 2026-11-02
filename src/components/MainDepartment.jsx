@@ -92,9 +92,9 @@ useEffect(() => {
                     href="#" 
                     className="min-w-[140px] md:min-w-[170px] group flex flex-col items-center bg-white p-4 rounded-2xl shadow-sm hover:shadow-md active:shadow-md transition-all duration-300 border border-gray-100 hover:border-pink-300 active:border-pink-300 shrink-0 select-none"
                   >
-                    <img src={item.icon} className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 group-active:scale-105 transition-transform duration-300">
+                    <img src={item.icon} className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-pink-50 flex items-center justify-center mb-3 group-hover:scale-105 group-active:scale-105 transition-transform duration-300"/>
                   
-                    </img>
+                    
                     <span className="font-semibold text-gray-800 text-sm md:text-base text-center group-hover:text-pink-600 group-active:text-pink-600 transition-colors">
                       {item.name}
                     </span>

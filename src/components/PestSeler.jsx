@@ -131,8 +131,8 @@ function PestSeler() {
       <section className="py-12 bg-white" style={{ marginTop: '20px' }}>
         <div className="container mx-auto px-4">
           
-         <div className="flex flex-row justify-between items-center mb-8 gap-4 w-full">
-            
+         <div className="flex flex-row justify-between items-center mb-8 gap-4 w-[90%] ml-15">
+           
             {/* زر عرض كل المنتجات (هيروح على الشمال في الشاشات الصغيرة والكبيرة) */}
             <Link to="/all-products" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-700 font-semibold text-sm transition-colors group flex-shrink-0">
               <span>عرض كل المنتجات</span>

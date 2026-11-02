@@ -31,7 +31,7 @@ export default function AddReviewForm({ onAddReview }) {
   };
 
   return (
-    <div className="w-full  bg-white rounded-2xl shadow-lg p-8 border border-gray-100 ">
+    <div  className="w-full  bg-white rounded-2xl shadow-lg p-8 border border-gray-100 ">
       <h3 className="text-xl  font-bold text-gray-900 mb-4 flex items-center justify-end gap-2">
         أضف تقييمك ورأيك بكل شفافية
         <MessageSquare className="text-emerald-600 flex justify-end" size={24} />

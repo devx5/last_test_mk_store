@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="rate_section" className=" bg-[#8EA48B] px-4 sm:px-6 lg:px-8" dir="rtl " style={{marginBottom: "30px"}}>
+    <section  className=" bg-[#8EA48B] px-4 sm:px-6 lg:px-8" dir="rtl " style={{marginBottom: "30px"}}>
       <div className="">
       
         {/* عنوان السيكشن */}
@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
         {/* زرار عرض الكل أو العودة للشكل المختصر */}
-        <div className="text-center py-10">
+        <div  className="text-center py-10">
           <button
             type="button"
             onClick={() => setShowAll(!showAll)}

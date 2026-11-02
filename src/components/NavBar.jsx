@@ -6,7 +6,6 @@ import { ProductsContext } from '../context/ProductContext.jsx';
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
-  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const mobileMenuRef = useRef(null);
@@ -19,11 +18,11 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   // جلب المنتجات من الكونتكست
-const { products } = useContext(ProductsContext);
+  const { products } = useContext(ProductsContext);
   const allProducts = products || [];;
 
   // دالة البحث الذكي والترتيب (البداية أولاً ثم المنتصف) باستخدام خصائص API الصحيحة (title, thumbnail)
- // دالة البحث الذكي مع تقنية الـ Debounce (تأخير زمني لمنع كثرة الطلبات)
+  // دالة البحث الذكي مع تقنية الـ Debounce (تأخير زمني لمنع كثرة الطلبات)
   useEffect(() => {
     // لو خانة البحث فاضية، نفذ فوراً وقفل النتائج
     if (searchTerm.trim() === '') {
@@ -35,7 +34,7 @@ const { products } = useContext(ProductsContext);
     // نعمل Timer يستنى 300 مللي ثانية بعد آخر حرف كتبه المستخدم
     const delayDebounceFn = setTimeout(() => {
       const query = searchTerm.toLowerCase();
-      
+
       const matched = allProducts.filter((p) => {
         const title = p.title || p.name || '';
         return title.toLowerCase().includes(query);
@@ -54,7 +53,7 @@ const { products } = useContext(ProductsContext);
 
       setSearchResults(matched);
       setIsSearchOpen(true);
-    }, 500); // المهلة الزمنية (300 مللي ثانية)
+    }, 500); // المهلة الزمنية (500 مللي ثانية)
 
     // يلغي الـ Timer القديم لو المستخدم كتب حرف جديد قبل انتهاء المهلة
     return () => clearTimeout(delayDebounceFn);
@@ -64,15 +63,17 @@ const { products } = useContext(ProductsContext);
   // إغلاق قائمة البحث عند الضغط خارجها
   useEffect(() => {
     function handleClickOutside(event) {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+      if (isMobileSearchOpen.current && searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+       setIsMobileSearchOpen(false);
         setIsSearchOpen(false);
+
       }
     }
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -81,13 +82,13 @@ const { products } = useContext(ProductsContext);
       }
     }
     if (isMobileMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('click', handleClickOutside);
     }
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [isMobileMenuOpen]);
-  
+
   useEffect(() => {
     const controlNavbar = () => {
       if (isMobileMenuOpen || isMobileSearchOpen) {
@@ -129,11 +130,14 @@ const { products } = useContext(ProductsContext);
 
             {/* Mobile Menu Button */}
             <div className="flex items-center xl:hidden">
-              <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // دي الكلمة السحرية اللي بتمنع الـ useEffect من إنه يلخبط الدنيا
+                  setIsMobileMenuOpen(prev => !prev);
+                }}
                 className="text-gray-700 hover:text-blue-600 focus:outline-none p-2"
               >
-                <i className="fa-solid fa-bars text-xl"></i>
+                <i className={`fa-solid ${isMobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-xl`}></i>
               </button>
             </div>
 
@@ -150,7 +154,7 @@ const { products } = useContext(ProductsContext);
               <Link to="/" className="hover:text-blue-600 transition">الرئيسية</Link>
               <a href="#" className="hover:text-blue-600 transition">قائمة الشركات</a>
               <Link to="/all-products" className="hover:text-blue-600 transition">كل المنتجات</Link>
-              
+
               <div className="relative group cursor-pointer">
                 <div className="flex items-center gap-1 hover:text-blue-600 transition">
                   <span>الأقسام</span>
@@ -174,9 +178,9 @@ const { products } = useContext(ProductsContext);
             {/* Search Bar (Desktop) */}
             <div className="hidden md:flex items-center flex-1 max-w-xs mx-6 relative" ref={searchContainerRef}>
               <div className="relative w-full">
-                <input 
-                  type="text" 
-                  placeholder="البحث عن المنتجات" 
+                <input
+                  type="text"
+                  placeholder="البحث عن المنتجات"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onFocus={() => searchTerm.trim() && setIsSearchOpen(true)}
@@ -229,11 +233,11 @@ const { products } = useContext(ProductsContext);
                 </div>
               </Link>
 
-              <a href="#" className="hidden sm:flex text-gray-600 hover:text-blue-600 p-2 items-center justify-center rounded-full hover:bg-gray-100">
+              <a href="#" className=" sm:flex text-gray-600 hover:text-blue-600 p-2 items-center justify-center rounded-full hover:bg-gray-100">
                 <i className="fa-regular fa-user text-lg"></i>
               </a>
 
-              <button 
+              <button
                 onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
                 className="xl:hidden text-gray-700 hover:text-blue-600 p-2"
               >
@@ -244,64 +248,64 @@ const { products } = useContext(ProductsContext);
           </div>
         </div>
 
-      {/* Mobile Search Bar Expanded */}
-  {isMobileSearchOpen && (
-    <div className="md:hidden px-4 pb-3 bg-white border-t border-gray-100 relative" ref={searchContainerRef}>
-      <div className="relative w-full mt-2">
-        <input 
-          type="text" 
-          placeholder="البحث عن المنتجات" 
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          // 1. عدلنا text-sm إلى text-base عشان حجم الخط يبقى 16px وما يعملش زوم أوتوماتيك على الموبايل
-          className="w-full bg-gray-100 text-base text-gray-800 rounded-full py-2 pr-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button className="absolute left-3 top-1.5 text-blue-600">
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
+        {/* Mobile Search Bar Expanded */}
+        {isMobileSearchOpen && (
+          <div className="md:hidden px-4 pb-3 bg-white border-t border-gray-100 relative" ref={searchContainerRef}>
+            <div className="relative w-full" style={{marginTop:"9px"}}>
+              <input
+                type="text"
+                placeholder="البحث عن المنتجات"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                // 1. عدلنا text-sm إلى text-base عشان حجم الخط يبقى 16px وما يعملش زوم أوتوماتيك على الموبايل
+                className="w-full bg-gray-100 text-base text-gray-800 rounded-full py-2 pr-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 "
+              />
+              <button className="absolute left-3 top-1.5 text-blue-600">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
 
-      {/* القائمة المنسدلة لنتائج البحث (موبايل) */}
-      {isSearchOpen && (
-        <div className="absolute right-4 left-4 mt-1 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-60 overflow-y-auto">
-          {searchResults.length > 0 ? (
-            <div className="divide-y divide-gray-100">
-              {searchResults.map((product) => (
-                <div
-                  key={product.id}
-                  onClick={() => {
-                    setIsSearchOpen(false);
-                    setIsMobileSearchOpen(false);
-                    setSearchTerm('');
-                    
-                    // 2. أمر سحري لإلغاء أي زوم حالي فور الضغط على المنتج وإغلاق البحث
-                    const vp = document.querySelector('meta[name="viewport"]');
-                    if (vp) {
-                      vp.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
-                      setTimeout(() => vp.setAttribute('content', 'width=device-width, initial-scale=1.0'), 150);
-                    }
+            {/* القائمة المنسدلة لنتائج البحث (موبايل) */}
+            {isSearchOpen && (
+              <div className="absolute right-4 left-4 mt-1 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-60 overflow-y-auto">
+                {searchResults.length > 0 ? (
+                  <div className="divide-y divide-gray-100">
+                    {searchResults.map((product) => (
+                      <div
+                        key={product.id}
+                        onClick={() => {
+                          setIsSearchOpen(false);
+                          setIsMobileSearchOpen(false);
+                          setSearchTerm('');
 
-                    navigate(`/product/${product.id}`);
-                  }}
-                  className="flex items-center gap-3 p-2.5 hover:bg-blue-50 cursor-pointer"
-                >
-                  <img src={product.thumbnail || product.image} alt={product.title || product.name} className="w-9 h-9 object-cover rounded-lg border" />
-                  <div className="flex-1 text-right">
-                    <h4 className="text-xs font-bold text-gray-800 line-clamp-1">{product.title || product.name}</h4>
-                    <span className="text-xs font-extrabold text-blue-600">${product.price}</span>
+                          // 2. أمر سحري لإلغاء أي زوم حالي فور الضغط على المنتج وإغلاق البحث
+                          const vp = document.querySelector('meta[name="viewport"]');
+                          if (vp) {
+                            vp.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+                            setTimeout(() => vp.setAttribute('content', 'width=device-width, initial-scale=1.0'), 150);
+                          }
+
+                          navigate(`/product/${product.id}`);
+                        }}
+                        className="flex items-center gap-3 p-2.5 hover:bg-blue-50 cursor-pointer"
+                      >
+                        <img src={product.thumbnail || product.image} alt={product.title || product.name} className="w-9 h-9 object-cover rounded-lg border" />
+                        <div className="flex-1 text-right">
+                          <h4 className="text-xs font-bold text-gray-800 line-clamp-1">{product.title || product.name}</h4>
+                          <span className="text-xs font-extrabold text-blue-600">${product.price}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="p-4 text-center text-gray-500">
-              <p className="text-xs font-bold text-gray-600">لا يوجد نتائج</p>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  )}
+                ) : (
+                  <div className="p-4 text-center text-gray-500">
+                    <p className="text-xs font-bold text-gray-600">لا يوجد نتائج</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Mobile Menu Drawer / Dropdown */}
         {isMobileMenuOpen && (

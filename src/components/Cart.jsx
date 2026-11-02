@@ -24,6 +24,14 @@ const CartPage = () => {
       image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=400'
     },
     {
+      id: 1,
+      title: 'أحمر شفاه مطفي طويل الثبات - لون أحمر جريء',
+      brand: 'MAC',
+      price: 85.00,
+      quantity: 1,
+      image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=400'
+    },
+    {
       id: 2,
       title: 'لوحة ظلال العيون نود بيوتي',
       brand: 'HUDA BEAUTY',
