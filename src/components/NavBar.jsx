@@ -115,13 +115,13 @@ export default function Navbar() {
 
   return (
     <div lang='ar' dir='rtl' className={`w-full bg-gray-100 font-['Cairo',sans-serif] sticky top-0 z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0 ' : '-translate-y-full'}`}>
-      {/* 1. Top Announcement Bar */}
+      {/* 1. Top Announcement Bar
       <div className="bg-[#1f2937] w-full text-gray-300 text-xs py-2 px-4 text-center mt-[69px] md:mt-[89px]">
         <div className="w-full flex justify-center items-center gap-2">
           <span>اتصل بنا - مكه لمستلزمات ومستحضرات التجميل بسعر الجملة</span>
           <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded text-[10px]">MK</span>
         </div>
-      </div>
+      </div> */}
 
       {/* 2. Main Navbar */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -132,7 +132,7 @@ export default function Navbar() {
             <div className="flex items-center xl:hidden">
               <button
                 onClick={(e) => {
-                  e.stopPropagation(); // دي الكلمة السحرية اللي بتمنع الـ useEffect من إنه يلخبط الدنيا
+                  e.stopPropagation();
                   setIsMobileMenuOpen(prev => !prev);
                 }}
                 className="text-gray-700 hover:text-blue-600 focus:outline-none p-2"

@@ -2,13 +2,11 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import NavBar from './components/NavBar.jsx';
-import Header from './components/Header.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import ProudctSection from './components/ProudctSection.jsx';
 import AllProudcts from './components/allproducts/AllProudcts.jsx';
 import RateSection from './components/rate/RateSection.jsx';
 import FeaturesSection from './components/FeaturesSection.jsx';
-import SaleSection from './components/SaleSection.jsx';
 import Footer from './components/Footer.jsx';
 import MainDepartment from './components/MainDepartment.jsx';
 import PestSeler from './components/PestSeler.jsx';
@@ -28,6 +26,8 @@ import ContactInfoCard from './components/contact/ContactInfoCard.jsx';
 import ReturnPolicyPage from './components/returnpolixy/ReturnPolicyPage.jsx';
 import Cart from './components/Cart.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx';
+import OffersSection from './components/OffersSesction.jsx';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,7 +37,7 @@ function App() {
     
         <ScrollToTop/>
       <div className='app '>
-        <Header />
+        
         <NavBar />
         <Routes>
           <Route
@@ -45,10 +45,10 @@ function App() {
             element={
               <div>
                 <HeroSection />
-                <SaleSection />
+               <OffersSection />
+                <MainDepartment />
                 <PestSeler />
                 <TradeMarks />
-                <MainDepartment />
                 <ShopByConcern />
                 <ProudctSection />
                 <SkinQuizBanner />

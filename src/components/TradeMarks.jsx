@@ -23,7 +23,7 @@ export default function TradeMarks() {
   };
 
   return (
-    <section className="py-10 bg-slate-50 border-y border-slate-200 overflow-hidden " style={{ marginTop: '2rem', marginBottom: '2rem' }}>
+    <section className="py-10 bg-slate-50 border-y border-slate-200 overflow-hidden " >
   
 
       {/* الشريط المتحرك */}

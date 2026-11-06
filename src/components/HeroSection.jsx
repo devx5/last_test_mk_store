@@ -34,9 +34,9 @@ export default function HeroSection() {
   };
 
  return (
-    <div style={{ width: '100%', padding: '24px 0', display: 'flex', justifyContent: 'center' }}>
+    <div style={{ width: '100%', padding: '0', display: 'flex', justifyContent: 'center' }}>
       {/* الحاوية الرئيسية للهيرو سيكشن */}
-      <div style={{ position: 'relative', width: '95%', height: '450px', borderRadius: '16px', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ position: 'relative', width: '100%', height: '88vh', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
         {slides[currentIndex].image ? (
           // لو السلايد عبارة عن صورة (الإعلان الاحترافي)
@@ -64,18 +64,23 @@ export default function HeroSection() {
         )}
 
         {/* أزرار التنقل بالأسهم (يمين ويسار) */}
-        <button 
-          onClick={prevSlide} 
-          style={{ position: 'absolute', right: '15px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.4)', color: '#fff', border: 'none', padding: '12px', cursor: 'pointer', zIndex: 10, borderRadius: '50%' }}
-        >
-          ❯
-        </button>
-        <button 
-          onClick={nextSlide} 
-          style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.4)', color: '#fff', border: 'none', padding: '12px', cursor: 'pointer', zIndex: 10, borderRadius: '50%' }}
-        >
-         ❮ 
-        </button>
+          <button 
+  onClick={prevSlide}
+  style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+  className="w-11 h-11 rounded-full bg-white/80 hover:bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:text-pink-600 transition-all duration-300 cursor-pointer font-bold text-lg"
+  title="السابق"
+>
+  &larr;
+</button>
+ <button 
+  onClick={nextSlide}
+  style={{ position: 'absolute', right: '15px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+  className="w-11 h-11 rounded-full bg-white/80 hover:bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-700 hover:text-pink-600 transition-all duration-300 cursor-pointer font-bold text-lg"
+  title="التالي"
+>
+  &rarr;
+</button>
+  
 
       </div>
     </div>

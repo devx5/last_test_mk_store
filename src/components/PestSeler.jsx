@@ -128,7 +128,7 @@ function PestSeler() {
 
   return (
     <div>
-      <section className="py-12 bg-white" style={{ marginTop: '20px' }}>
+      <section className="py-12 bg-white" >
         <div className="container mx-auto px-4">
           
          <div className="flex flex-row justify-between items-center mb-8 gap-4 w-[90%] ml-15">
