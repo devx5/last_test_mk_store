@@ -16,7 +16,7 @@ const CartPage = () => {
   // بيانات تجريبية جاهزة (تقدر تعدلها أو تربطها باللي تعمله براحتك)
   const [cartItems, setCartItems] = useState([
     {
-      id: 1,
+      id: 3,
       title: 'أحمر شفاه مطفي طويل الثبات - لون أحمر جريء',
       brand: 'MAC',
       price: 85.00,
