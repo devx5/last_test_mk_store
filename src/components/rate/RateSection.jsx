@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section  className=" bg-[#8EA48B] px-4 sm:px-6 lg:px-8" dir="rtl " style={{marginBottom: "30px"}}>
+    <section  className=" bg-white px-4 sm:px-6 lg:px-8" dir="rtl " style={{marginBottom: "30px"}}>
       <div className="">
       
         {/* عنوان السيكشن */}

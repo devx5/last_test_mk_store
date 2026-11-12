@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import herophoto from '../assets/img/herophoto.jpeg';
 import herophoto2 from '../assets/img/herophoto2.jpeg';
-
-import test from '../assets/img/test.jpeg';
+import selfcare from '../assets/img/icon/selfcare.jpg'
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -14,7 +13,7 @@ export default function HeroSection() {
       image: herophoto2,
     },
     {
-     image: test,
+     image: selfcare,
     },
   ];
 

@@ -190,7 +190,7 @@ function PestSeler() {
                   className="w-[calc(50%-8px)] sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] flex-shrink-0 bg-white rounded-2xl border border-gray-100 hover:border-pink-200 active:border-pink-200 shadow-sm  hover:shadow-lg  active:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group text-right"
                 >
                   <div className="relative bg-gray-50 h-48 md:h-60 overflow-hidden flex items-center justify-center">
-                    <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
+                    <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10 animate-pulse">
                       {product.badge}
                     </span>
                     <img className="w-full h-full object-cover transition-transform duration-300  hover:scale-105 active:scale-105" src={product.image} alt={product.alt} />

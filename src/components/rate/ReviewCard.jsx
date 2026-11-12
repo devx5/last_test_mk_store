@@ -15,7 +15,7 @@ export default function ReviewCard({ review , isLoading }) {
       </div>
       <div>
         {/* نجوم العرض */}
-        <div className="flex space-x-1 space-x-reverse mb-4 justify-end ">
+        <div className="flex mb-4 justify-end ">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
@@ -32,10 +32,10 @@ export default function ReviewCard({ review , isLoading }) {
           "{review.comment}"
         </p>
       </div>
-      <div className="flex items-center pt-4 border-t border-gray-100 justify-end">
-         <div className=" ">
-          <h4 className="text-sm font-bold text-gray-900">{review.name}</h4>
-          <span className="text-xs text-emerald-600 font-medium ml-8">{review.role}</span>
+      <div  className="flex items-center pt-4 border-t border-gray-100 justify-end">
+         <div >
+          <h4 dir='rtl' className="text-sm font-bold text-gray-900 mr-2">{review.name}</h4>
+          <span className="text-xs text-emerald-600 font-medium mr-1">{review.role}</span>
         </div>
         <div className="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg">
           {review.name.charAt(0)}

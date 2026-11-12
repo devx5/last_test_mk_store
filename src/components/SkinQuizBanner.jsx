@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SkinQuizBanner() {
   return (
-    <section className="py-10 bg-green-200">
+    <section className="py-10 bg-[#8EA48b]">
       <div className="container mx-auto px-4">
         <div className="relative overflow-hidden rounded-3xl bg-pink-600 p-8 sm:p-12 text-white shadow-xl">
           

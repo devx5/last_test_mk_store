@@ -113,6 +113,8 @@ export default function Navbar() {
     };
   }, [lastScrollY, isMobileMenuOpen, isMobileSearchOpen]);
 
+
+
   return (
     <div lang='ar' dir='rtl' className={`w-full bg-gray-100 font-['Cairo',sans-serif] sticky top-0 z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0 ' : '-translate-y-full'}`}>
       {/* 1. Top Announcement Bar
@@ -145,7 +147,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link to="/" className="text-2xl font-bold tracking-tight text-blue-900 flex items-center gap-1">
                 <span className="text-gray-700 mt-1">Store</span>
-                <img src={logo} className="h-15 w-15" alt="Mekkah Logo" />
+                <img src={logo} className="h-15 w-13" alt="Mekkah Logo" />
               </Link>
             </div>
 
@@ -226,16 +228,16 @@ export default function Navbar() {
             {/* Right Action Icons */}
             <div className="flex items-center space-x-1 space-x-reverse">
               <Link to="/cart" className="flex items-center gap-1 bg-gray-50 border border-gray-200 rounded-md px-2.5 py-1.5 cursor-pointer hover:bg-gray-100 transition">
-                <span className="text-xs font-semibold text-gray-700">EGP 0.00</span>
+                <span className="text-xs font-semibold text-gray-700">EGP 00.00</span>
                 <div className="relative bg-blue-600 text-white rounded p-1">
                   <i className="fa-solid fa-cart-shopping text-xs"></i>
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
                 </div>
               </Link>
 
-              <a href="#" className=" sm:flex text-gray-600 hover:text-blue-600 p-2 items-center justify-center rounded-full hover:bg-gray-100">
+              <Link to="/Login" className=" sm:flex text-gray-600 hover:text-blue-600 p-2 items-center justify-center rounded-full hover:bg-gray-100">
                 <i className="fa-regular fa-user text-lg"></i>
-              </a>
+              </Link>
 
               <button
                 onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}

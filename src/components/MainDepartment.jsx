@@ -63,9 +63,9 @@ function MainDepartment() {
         <div className="container mx-auto px-4">
           
           {/* عنوان القسم والوصف */}
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">تسوق حسب الأقسام الرئيسية</h2>
-            <p className="text-gray-500 text-sm mt-2">اختر القسم المناسب لاحتياجاتك واستكشف أفضل المنتجات الأصلية</p>
+          <div className="text-center ">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 ">تسوق حسب الأقسام الرئيسية</h2>
+            <p className="text-gray-500 text-sm py-3">اختر القسم المناسب لاحتياجاتك واستكشف أفضل المنتجات الأصلية</p>
           </div>
 
           {/* الحاوية الرئيسية: تجمع الأزرار خارج مساحة العناصر */}

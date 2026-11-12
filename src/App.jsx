@@ -27,8 +27,8 @@ import ReturnPolicyPage from './components/returnpolixy/ReturnPolicyPage.jsx';
 import Cart from './components/Cart.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx';
 import OffersSection from './components/OffersSesction.jsx';
-
-
+import Login from './components/auth/LogIn.jsx';
+import Register from './components/auth/regester.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -92,6 +92,8 @@ function App() {
               </div>
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
 
       </div>

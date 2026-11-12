@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Star, MessageSquare, Send } from 'lucide-react';
-
+import bodycare from '../../assets/img/icon/bodycare.jpg'
 export default function AddReviewForm({ onAddReview }) {
   // حالة النجوم التفاعلية والكومنت الجديد الخاص باليوزر
   const [newRating, setNewRating] = useState(0);
@@ -31,7 +31,7 @@ export default function AddReviewForm({ onAddReview }) {
   };
 
   return (
-    <div  className="w-full  bg-white rounded-2xl shadow-lg p-8 border border-gray-100 ">
+    <div  className="max-w-6xl mx-auto w-full bg-white border-green-200 rounded-2xl shadow-lg p-8 border border-gray-100 " >
       <h3 className="text-xl  font-bold text-gray-900 mb-4 flex items-center justify-end gap-2">
         أضف تقييمك ورأيك بكل شفافية
         <MessageSquare className="text-emerald-600 flex justify-end" size={24} />

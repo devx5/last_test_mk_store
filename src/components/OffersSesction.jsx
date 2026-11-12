@@ -90,7 +90,7 @@ function OffersSection() {
       <div className="container mx-auto px-4">
         
         {/* الهيدر: العنوان + العداد التنازلي الحقيقي + زر عرض كل العروض */}
-        <div className=" flex flex-col md:flex-row justify-between  mb-8 gap-4 pb-6 ">
+        <div className="max-w-6xl ml-auto flex flex-col md:flex-row justify-between  mb-8 gap-4 pb-6 ">
           
           {/* رابط صفحة كل العروض */}
           <Link 
@@ -102,7 +102,7 @@ function OffersSection() {
           </Link>
 
           {/* العداد التنازلي الحقيقي (أيام، ساعات، دقائق، ثواني) */}
-          <div className="flex items-center gap-2  px-4 py-2 rounded-2xl shadow-sm border border-pink-100 order-2">
+          <div className=" flex items-center justify-center gap-2  px-4 py-2 rounded-2xl shadow-sm border border-pink-100 order-2 ">
             <span className="text-xs text-gray-500 font-medium">ينتهي العرض خلال:</span>
             <div className="flex items-center gap-1 font-bold text-pink-600 dir-ltr text-xs md:text-sm">
               {timeLeft.days > 0 && (
@@ -130,9 +130,8 @@ function OffersSection() {
           {/* عنوان السيكشن */}
           <div className="order-1 md:order-3 text-right">
             <div className="flex items-center gap-2">
-              <span className="text-2xl" style={{ marginBottom: '10px' }}>⚡</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>
-                عروض وتخفيضات حصريّة
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 " style={{ marginBottom: '0.5rem', marginLeft:"auto" }}>
+               ⚡ عروض وتخفيضات حصريّة
               </h2>
             </div>
             <p className="text-gray-500 text-sm">أقوى العروض لفترة محدودة جداً لا تفوتها</p>

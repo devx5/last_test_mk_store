@@ -12,15 +12,15 @@ const brands = [
 export default function TradeMarks() {
   const containerRef = useRef(null);
 
-  const handleScroll = (direction) => {
-    if (containerRef.current) {
-      const scrollAmount = 300;
-      containerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
+  // const handleScroll = (direction) => {
+  //   if (containerRef.current) {
+  //     const scrollAmount = 300;
+  //     containerRef.current.scrollBy({
+  //       left: direction === 'left' ? -scrollAmount : scrollAmount,
+  //       behavior: 'smooth',
+  //     });
+  //   }
+  // };
 
   return (
     <section className="py-10 bg-slate-50 border-y border-slate-200 overflow-hidden " >
