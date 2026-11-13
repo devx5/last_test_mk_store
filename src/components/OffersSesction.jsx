@@ -101,31 +101,7 @@ function OffersSection() {
             <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
           </Link>
 
-          {/* العداد التنازلي الحقيقي (أيام، ساعات، دقائق، ثواني) */}
-          <div className=" flex items-center justify-center gap-2  px-4 py-2 rounded-2xl shadow-sm border border-pink-100 order-2 ">
-            <span className="text-xs text-gray-500 font-medium">ينتهي العرض خلال:</span>
-            <div className="flex items-center gap-1 font-bold text-pink-600 dir-ltr text-xs md:text-sm">
-              {timeLeft.days > 0 && (
-                <>
-                  <span className="bg-pink-100 px-1.5 py-0.5 rounded-md">
-                    {timeLeft.days}ي
-                  </span>
-                  <span>:</span>
-                </>
-              )}
-              <span className="bg-pink-100 px-1.5 py-0.5 rounded-md">
-                {String(timeLeft.hours).padStart(2, '0')}
-              </span>
-              <span>:</span>
-              <span className="bg-pink-100 px-1.5 py-0.5 rounded-md">
-                {String(timeLeft.minutes).padStart(2, '0')}
-              </span>
-              <span>:</span>
-              <span className="bg-pink-100 px-1.5 py-0.5 rounded-md text-pink-700">
-                {String(timeLeft.seconds).padStart(2, '0')}
-              </span>
-            </div>
-          </div>
+
 
           {/* عنوان السيكشن */}
           <div className="order-1 md:order-3 text-right">

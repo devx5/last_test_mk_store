@@ -31,16 +31,16 @@ export default function AddReviewForm({ onAddReview }) {
   };
 
   return (
-    <div  className="max-w-6xl mx-auto w-full bg-white border-green-200 rounded-2xl shadow-lg p-8 border border-gray-100 " >
-      <h3 className="text-xl  font-bold text-gray-900 mb-4 flex items-center justify-end gap-2">
+    <div  className="max-w-6xl mx-auto w-full bg-white border-green-200 rounded-2xl shadow-lg p-10 border " style={{marginBottom: "2rem"}} >
+      <h3 className="text-xl  font-bold text-gray-900 mb-4 flex items-center justify-end gap-2 " >
         أضف تقييمك ورأيك بكل شفافية
         <MessageSquare className="text-emerald-600 flex justify-end" size={24} />
       </h3>
 
-      <form onSubmit={handleSubmitReview} >
+      <form className='space-y-5' onSubmit={handleSubmitReview} >
         {/* تفاعل النجوم */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 py-3 flex justify-end">تقييمك للمنتجات:</label>
+          <label className="text-sm font-medium text-gray-700 py-3 flex justify-end">تقييمك للمنتجات:</label>
           <div dir='rtl' className="flex  justify-start space-x-1 space-x-reverse cursor-pointer">
             {[...Array(5)].map((_, index) => {
               const starValue = index + 1;
@@ -63,7 +63,7 @@ export default function AddReviewForm({ onAddReview }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 py-2 flex justify-end"> الاسم:</label>
+          <label className=" text-sm font-medium text-gray-700 py-2 flex justify-end"> الاسم:</label>
           <input
             type="text"
             value={userName}
@@ -88,8 +88,9 @@ export default function AddReviewForm({ onAddReview }) {
 
         <button
           type="submit"
-          className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md"
-        >
+          className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md" 
+    
+       >
           <Send size={18} />
           إرسال التقييم
         </button>
