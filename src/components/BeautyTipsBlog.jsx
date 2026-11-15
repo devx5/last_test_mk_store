@@ -41,7 +41,7 @@ function BeautyTipsBlog() {
   return (
     <div>
       {/* القسم الأخير: دليلك الجمالي والمدونة (القسم رقم 4) */}
-      <section className="py-14 bg-gray-50">
+      <section className="py-14 bg-gradient-to-b from-[#CFECF3] to-[#659287] " >
         <div className="container mx-auto px-4">
           
           {/* عنوان القسم */}

@@ -23,7 +23,7 @@ export default function TradeMarks() {
   // };
 
   return (
-    <section className="py-10 bg-slate-50 border-y border-slate-200 overflow-hidden " >
+    <section className="py-10 bg-gradient-to-b from-[#CFECF3] to-[#659287]  border-y border-sky-200 overflow-hidden " >
   
 
       {/* الشريط المتحرك */}

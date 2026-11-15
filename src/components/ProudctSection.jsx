@@ -69,7 +69,7 @@ const ProductsSection = () => {
   }
 
   return (
-    <section className="py-3 px-4 md:px-8 max-w-7xl mx-auto ">
+    <section className="py-3 px-4 md:px-8 max-w-7xl mx-auto " >
       <h2 className="text-2xl py-8 text-center font-bold text-gray-800 mb-8">منتجات التجميل والعناية</h2>
 
       {/* شبكة الكروت المتجاوبة */}
@@ -113,7 +113,7 @@ const ProductsSection = () => {
                     key={star}
                     type="button"
                     onClick={() => handleRate(product.id, star)}
-                    className="focus:outline-none transition-transform hover:scale-125 active:scale-125 duration-150"
+                    className="focus:outline-none transition-transform hover:scale-125 active:scale-125 duration-150  cursor-pointer"
                   >
                     <i
                       className={`fa-star ${star <= currentRating ? 'fa-solid text-amber-400' : 'fa-regular text-gray-300'} text-lg`}
@@ -123,10 +123,10 @@ const ProductsSection = () => {
               </div>
 
               {/* زر تسوق الآن */}
-              <div className="p-4 pt-0">
+              <div className="p-4 pt-0 ">
                 <button
                   onClick={() => handleAddToCart(product)}
-                  className={`w-full text-white py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
+                  className={`w-full text-white py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center cursor-pointer gap-2 ${
                     addedItems[product.id]
                       ? 'bg-green-600 hover:bg-green-700 active:bg-green-700'
                       : 'bg-pink-600 hover:bg-pink-700 active:bg-pink-700'

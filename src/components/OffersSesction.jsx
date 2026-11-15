@@ -86,19 +86,19 @@ function OffersSection() {
   ];
 
   return (
-    <section className="py-12 bg-white" style={{ marginTop: '20px' }}>
+    <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
       <div className="container mx-auto px-4">
         
         {/* الهيدر: العنوان + العداد التنازلي الحقيقي + زر عرض كل العروض */}
-        <div className="max-w-6xl ml-auto flex flex-col md:flex-row justify-between  mb-8 gap-4 pb-6 ">
+        <div className="max-w-7xl ml-auto flex flex-col md:flex-row justify-between  mb-8 gap-4 pb-6 ">
           
           {/* رابط صفحة كل العروض */}
           <Link 
             to="/offers" 
             className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-700 font-semibold text-sm transition-colors group order-3 md:order-1"
           >
+            <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform ">←</span>
             <span>عرض كل العروض</span>
-            <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
           </Link>
 
 
@@ -159,7 +159,7 @@ function OffersSection() {
                     <span className="text-gray-400 text-xs line-through mr-2">{item.oldPrice}</span>
                   </div>
 
-                  <button className="bg-pink-600 hover:bg-pink-700 active:bg-pink-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors duration-300 flex items-center gap-1.5">
+                  <button className="bg-pink-600 hover:bg-pink-700 active:bg-pink-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors duration-300 flex items-center gap-1.5  cursor-pointer">
                     <span>احصل على العرض</span>
                     <span>🛒</span>
                   </button>

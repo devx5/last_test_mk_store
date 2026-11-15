@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function SkinQuizBanner() {
   return (
-    <section className="py-10 bg-[#8EA48b]">
-      <div className="container mx-auto px-4">
-        <div className="relative overflow-hidden rounded-3xl bg-pink-600 p-8 sm:p-12 text-white shadow-xl">
+    <section className="py-10 bg-gradient-to-b from-[#CFECF3] to-[#659287] ">
+      <div className="container mx-auto px-4 ">
+        <div className="relative overflow-hidden rounded-3xl  p-8 sm:p-12 text-white shadow-xl bg-white/10">
           
           {/* دوائر خلفية جمالية */}
           <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-2xl pointer-events-none" />
@@ -27,7 +27,7 @@ export default function SkinQuizBanner() {
             </p>
 
             {/* زر البدء */}
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-pink-600 font-bold rounded-2xl shadow-lg hover:bg-pink-50 hover:scale-105 transition-all duration-300 active:scale-95 text-sm sm:text-base cursor-pointer">
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-pink-600 text-white font-bold rounded-2xl shadow-lg hover:bg-pink-50 hover:scale-105 transition-all duration-300 active:scale-95 text-sm sm:text-base cursor-pointer hover:text-black">
               <span>&#8592;</span>
               <span>ابدأي اختبار البشرة الآن</span>
             </button>

@@ -31,7 +31,7 @@ export default function AddReviewForm({ onAddReview }) {
   };
 
   return (
-    <div  className="max-w-6xl mx-auto w-full bg-white border-green-200 rounded-2xl shadow-lg p-10 border " style={{marginBottom: "2rem"}} >
+    <div  className="max-w-3xl mx-auto w-full bg-white border-green-200 rounded-2xl shadow-lg p-10 border "  >
       <h3 className="text-xl  font-bold text-gray-900 mb-4 flex items-center justify-end gap-2 " >
         أضف تقييمك ورأيك بكل شفافية
         <MessageSquare className="text-emerald-600 flex justify-end" size={24} />
@@ -88,7 +88,7 @@ export default function AddReviewForm({ onAddReview }) {
 
         <button
           type="submit"
-          className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md" 
+          className="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md  cursor-pointer " 
     
        >
           <Send size={18} />

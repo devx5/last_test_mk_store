@@ -59,7 +59,7 @@ function MainDepartment() {
   return (
     <div>
       {/* قسم التصنيفات الرئيسية */}
-      <section className="py-12 bg-gray-50" >
+      <section className="py-12 bg-gradient-to-b from-[#CFECF3] to-[#659287] " >
         <div className="container mx-auto px-4">
           
           {/* عنوان القسم والوصف */}

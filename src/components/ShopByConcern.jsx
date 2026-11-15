@@ -35,7 +35,7 @@ const concerns = [
 
 export default function ShopByConcern() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3]">
       <div className="container mx-auto px-4">
         {/* Title */}
         <div className="text-center max-w-xl mx-auto" style={{ marginBottom: '2rem' }}>

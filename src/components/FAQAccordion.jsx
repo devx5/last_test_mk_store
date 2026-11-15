@@ -31,7 +31,7 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="py-12 bg-white border-t border-slate-100">
+    <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3] border-slate-100">
       <div className="container mx-auto px-4 max-w-3xl" style={{ marginBottom: '2rem' }}>
         {/* Title */}
         <div className="text-center " style={{ marginBottom: '1rem' }}>

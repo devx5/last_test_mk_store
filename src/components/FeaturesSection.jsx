@@ -1,7 +1,7 @@
 export default function FeaturesSection() {
   return (
     
-    <section className="bg-[#8EA48B] py-8   mt-12">
+    <section className="bg-gradient-to-b from-[#CFECF3] to-[#659287]  py-8   mt-12">
       <div className="sm:px-6 lg:px-8">
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
