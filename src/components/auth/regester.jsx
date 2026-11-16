@@ -20,7 +20,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#8EA48B] px-4 py-12" dir="rtl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#CFECF3] to-[#659287] px-4 py-12" dir="rtl">
       <div className="max-w-md w-full space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
         
         {/* رأس الصفحة والشعار */}

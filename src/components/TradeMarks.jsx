@@ -23,11 +23,11 @@ export default function TradeMarks() {
   // };
 
   return (
-    <section className="py-10 bg-gradient-to-b from-[#CFECF3] to-[#659287]  border-y border-sky-200 overflow-hidden " >
+    <section className="py-10 bg-gradient-to-b from-[#CFECF3] to-[#659287]  overflow-hidden " >
   
 
       {/* الشريط المتحرك */}
-      <div className="relative w-full overflow-hidden py-2">
+      <div className="relative w-full overflow-hidden py-2 bg-white/30 rounded-2xl py-10 border border-slate-200 shadow-lg">
         <div
           ref={containerRef}
           className="flex gap-4 sm:gap-6 w-max marquee-track"

@@ -86,8 +86,8 @@ function OffersSection() {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
-      <div className="container mx-auto px-4">
+    <section className="py-12  bg-gradient-to-b from-[#659287] to-[#CFECF3] " >
+      <div className="container  mx-auto px-10 bg-white/30 py-10 rounded-2xl shadow-lg">
         
         {/* الهيدر: العنوان + العداد التنازلي الحقيقي + زر عرض كل العروض */}
         <div className="max-w-7xl ml-auto flex flex-col md:flex-row justify-between  mb-8 gap-4 pb-6 ">
@@ -120,7 +120,7 @@ function OffersSection() {
           {deals.map((item) => (
             <div 
               key={item.id}
-              className="bg-white rounded-2xl border border-pink-100 hover:border-pink-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group"
+              className="bg-white/40 rounded-2xl border border-pink-100 hover:border-pink-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group"
             >
               {/* الصورة وشارة الخصم */}
               <div className="relative bg-gray-50 h-56 overflow-hidden flex items-center justify-center">

@@ -69,7 +69,8 @@ const ProductsSection = () => {
   }
 
   return (
-    <section className="py-3 px-4 md:px-8 max-w-7xl mx-auto " >
+    <section className="py-3 px-4 md:px-8  mx-auto  bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
+      <div className="bg-white/30 p-10 rounded-2xl shadow-md max-w-7xl mx-auto">
       <h2 className="text-2xl py-8 text-center font-bold text-gray-800 mb-8">منتجات التجميل والعناية</h2>
 
       {/* شبكة الكروت المتجاوبة */}
@@ -161,7 +162,7 @@ const ProductsSection = () => {
           <span>عرض الكل</span>
         </Link>
       </div>
-
+</div>
     </section>
   );
 };

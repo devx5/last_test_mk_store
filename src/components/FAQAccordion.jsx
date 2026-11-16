@@ -32,7 +32,7 @@ export default function FAQAccordion() {
 
   return (
     <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3] border-slate-100">
-      <div className="container mx-auto px-4 max-w-3xl" style={{ marginBottom: '2rem' }}>
+      <div className="container mx-auto px-15 max-w-3xl bg-white/30 py-10 rounded-2xl shadow-lg" style={{ marginBottom: '2rem' }}>
         {/* Title */}
         <div className="text-center " style={{ marginBottom: '1rem' }}>
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800" >
@@ -44,13 +44,13 @@ export default function FAQAccordion() {
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-4">
+        <div className="" >
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
               <div
                 key={faq.id}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 "
+                className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 " style={{ marginBottom: '0.5rem' }}
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}

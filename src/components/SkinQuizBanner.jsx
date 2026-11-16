@@ -3,12 +3,12 @@ import React from 'react';
 export default function SkinQuizBanner() {
   return (
     <section className="py-10 bg-gradient-to-b from-[#CFECF3] to-[#659287] ">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-4 bg-white/30 py-10 rounded-2xl shadow-lg">
         <div className="relative overflow-hidden rounded-3xl  p-8 sm:p-12 text-white shadow-xl bg-white/10">
           
           {/* دوائر خلفية جمالية */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-2xl pointer-events-none" />
-          <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-2xl pointer-events-none" />
+          <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full  blur-2xl pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full  blur-2xl pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
             {/* الشارة العلوية */}

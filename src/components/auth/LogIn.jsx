@@ -18,7 +18,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center bg-[#8EA48B] px-4 py-12" dir="rtl">
+    <div className="flex items-center justify-center bg-gradient-to-b from-[#CFECF3] to-[#659287] px-4 py-12" dir="rtl">
       <div className="max-w-md w-full  bg-white p-8  rounded-2xl shadow-xl border border-gray-100">
         
         {/* رأس الصفحة والشعار */}

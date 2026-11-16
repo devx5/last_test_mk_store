@@ -8,7 +8,7 @@ export default function ReviewCard({ review , isLoading }) {
   return (
     <div
       key={review.id}
-      className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:shadow-xl active:-translate-y-2 relative border border-gray-100 flex flex-col justify-between"
+      className="bg-white/80 rounded-2xl shadow-md p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl active:shadow-xl active:-translate-y-2 relative border border-gray-100 flex flex-col justify-between"
     >
       <div className="absolute top-2 left-2 text-emerald-600 opacity-20">
         <Quote size={40} />

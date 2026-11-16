@@ -26,7 +26,7 @@ import ContactInfoCard from './components/contact/ContactInfoCard.jsx';
 import ReturnPolicyPage from './components/returnpolixy/ReturnPolicyPage.jsx';
 import Cart from './components/Cart.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx';
-import OffersSection from './components/OffersSesction.jsx';
+// import OffersSection from './components/OffersSesction.jsx';
 import Login from './components/auth/LogIn.jsx';
 import Register from './components/auth/regester.jsx';
 function App() {
@@ -45,11 +45,11 @@ function App() {
             element={
               <div>
                 <HeroSection />
-               <OffersSection />
-                <MainDepartment />
+               {/* <OffersSection /> */}
                 <PestSeler />
                 <TradeMarks />
                 <ShopByConcern />
+                <MainDepartment />
                 <ProudctSection />
                 <SkinQuizBanner />
                 <RateSection />

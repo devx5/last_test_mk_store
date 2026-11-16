@@ -34,8 +34,8 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section  className=" bg-gradient-to-b from-[#659287] to-[#CFECF3] px-4 sm:px-6 lg:px-8" dir="rtl " style={{marginBottom: "30px"}}>
-      <div className="">
+    <section  className=" bg-gradient-to-b from-[#659287] to-[#CFECF3] px-4 py-10 sm:px-6 lg:px-8" dir="rtl z-10" >
+      <div className="bg-white/30 p-10 rounded-2xl shadow-lg">
       
         {/* عنوان السيكشن */}
         <div className="text-center my-8">
@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
           <button
             type="button"
             onClick={() => setShowAll(!showAll)}
-            className=" px-6 py-3 bg-white border-2 border-emerald-600 text-emerald-600 font-bold rounded-xl hover:bg-emerald-600 hover:text-white active:bg-emerald-600 active:text-white transition-all duration-300 shadow-sm cursor-pointer"
+            className=" px-6 py-3 bg-white/80 border-2 border-emerald-600 text-emerald-600 font-bold rounded-xl hover:bg-emerald-600 hover:text-white active:bg-emerald-600 active:text-white transition-all duration-300 shadow-sm cursor-pointer"
           >
             {showAll ? 'إخفاء التعليقات' : 'عرض جميع التعليقات'}
           </button>

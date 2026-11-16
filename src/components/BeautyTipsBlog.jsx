@@ -42,7 +42,7 @@ function BeautyTipsBlog() {
     <div>
       {/* القسم الأخير: دليلك الجمالي والمدونة (القسم رقم 4) */}
       <section className="py-14 bg-gradient-to-b from-[#CFECF3] to-[#659287] " >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-white/30 py-10 rounded-2xl shadow-lg">
           
           {/* عنوان القسم */}
           <div className="text-center mb-10">
@@ -62,7 +62,7 @@ function BeautyTipsBlog() {
             {articles.map((article) => (
               <div 
                 key={article.id} 
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group"
+                className="bg-white/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-md active:shadow-md border border-gray-100 transition-all duration-300 flex flex-col group"
               >
                 {/* الصورة كخلفية كاملة للجزء العلوي */}
                 <div className="relative h-48 w-full overflow-hidden">
@@ -85,13 +85,13 @@ function BeautyTipsBlog() {
                     <span>•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <h3 className="font-bold text-gray-800 text-base md:text-lg mb-3 group-hover:text-pink-600 group-active:text-pink-600 transition-colors line-clamp-2">
+                  <h3 className="font-bold text-gray-800 text-base md:text-lg  group-hover:text-pink-600 group-active:text-pink-600 transition-colors line-clamp-2 text-right pb-2 pt-1">
                     {article.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mb-6 line-clamp-3">
+                  <p className="text-gray-500 text-sm mb-6 line-clamp-3 text-right py-2">
                     {article.description}
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-50">
+                  <div className="mt-auto pt-4 ">
                     <a 
                       href={article.link} 
                       // أضفنا active لتغيير لون النص عند الضغط على اللينك

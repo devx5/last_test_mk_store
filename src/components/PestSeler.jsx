@@ -129,7 +129,7 @@ function PestSeler() {
   return (
     <div>
       <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-white/30 py-10 rounded-2xl shadow-lg">
 
           <div className="flex flex-row justify-between items-center mb-8 gap-4 w-[90%] ml-auto">
 

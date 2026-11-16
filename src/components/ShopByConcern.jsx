@@ -36,9 +36,9 @@ const concerns = [
 export default function ShopByConcern() {
   return (
     <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-10 bg-white/30 p-15 rounded-2xl shadow-lg">
         {/* Title */}
-        <div className="text-center max-w-xl mx-auto" style={{ marginBottom: '2rem' }}>
+        <div className="text-center  mx-auto" style={{ marginBottom: '2rem' }}>
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-800">
             تسوقي حسب احتياج بشرتك وشعرك
           </h2>
