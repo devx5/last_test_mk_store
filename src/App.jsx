@@ -48,12 +48,12 @@ function App() {
                {/* <OffersSection /> */}
                 <PestSeler />
                 <TradeMarks />
-                <ShopByConcern />
                 <MainDepartment />
                 <ProudctSection />
+                <ShopByConcern />
                 <SkinQuizBanner />
-                <RateSection />
                 <BeautyTipsBlog />
+                <RateSection />
                 <FAQAccordion />
                 <FeaturesSection />
               </div>
@@ -69,7 +69,7 @@ function App() {
           <Route
             path="/about"
             element={
-              <div className="about_pages">
+              <div className="about_pages ">
                 <HeroStory />
                 <CoreValues />
                 <StatsCounter />

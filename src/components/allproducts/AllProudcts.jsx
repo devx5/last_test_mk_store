@@ -139,8 +139,8 @@ const { products, loading } = useContext(ProductsContext);
 
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
-   
+    <div className=" px-4 py-8 bg-gradient-to-b from-[#CFECF3] to-[#659287]" dir="rtl">
+   <div className='max-w-7xl mx-auto'>
      {/* 1. سيكشن الأقسام */}
       <CategorySection categories={categories} />
      
@@ -163,7 +163,7 @@ const { products, loading } = useContext(ProductsContext);
       <div className="flex flex-col lg:flex-row gap-8 items-start">
         
         {/* السايد بار للشاشات الكبيرة */}
-        <div className="hidden lg:block sticky top-6">
+        <div className="hidden xl:w-80 shrink-0  lg:block sticky top-6">
           <FilterSidebar
             filters={filters}
             setFilters={setFilters}
@@ -196,7 +196,7 @@ const { products, loading } = useContext(ProductsContext);
         </div>
 
       </div>
-
+</div>
     </div>
   );
 };

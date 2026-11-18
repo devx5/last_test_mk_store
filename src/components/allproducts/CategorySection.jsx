@@ -5,7 +5,7 @@ export default function CategorySection({ categories }) {
   return (
     <div>
        {/* سيكشن الأقسام العلوي */}
-       <div className="mb-10 bg-white shadow-md rounded-2xl p-6 border border-gray-100" style={{ marginBottom: '3rem' }}>
+       <div className="mb-10 bg-white/80 shadow-md rounded-2xl p-6 pb-8" style={{ marginBottom: '3rem' }}>
          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2 " style={{ marginBottom: '1rem' }}>
            <Sparkles className="w-6 h-6 text-pink-600 animate-spin" style={{ animationDuration: '4s' }} />
            أقسام المنتجات

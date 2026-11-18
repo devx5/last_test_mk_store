@@ -41,12 +41,12 @@ function BeautyTipsBlog() {
   return (
     <div>
       {/* القسم الأخير: دليلك الجمالي والمدونة (القسم رقم 4) */}
-      <section className="py-14 bg-gradient-to-b from-[#CFECF3] to-[#659287] " >
+      <section className="py-14 bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
         <div className="container mx-auto px-4 bg-white/30 py-10 rounded-2xl shadow-lg">
           
           {/* عنوان القسم */}
           <div className="text-center mb-10">
-            <div className="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full" style={{ marginBottom: '1rem' }}>
+            <div className="inline-block bg-white/40 text-black text-s font-bold px-3 py-1 rounded-full animate-bounce" style={{ marginBottom: '1rem' }}>
               دليلك الجمالي
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800" style={{ marginBottom: '1rem' }}>
@@ -66,7 +66,7 @@ function BeautyTipsBlog() {
               >
                 {/* الصورة كخلفية كاملة للجزء العلوي */}
                 <div className="relative h-48 w-full overflow-hidden">
-                  <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-pink-600 text-xs font-semibold px-3 py-1 rounded-full shadow-sm z-10">
+                  <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-pink-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm z-10 animate-pulse">
                     {article.category}
                   </span>
                   
@@ -97,8 +97,8 @@ function BeautyTipsBlog() {
                       // أضفنا active لتغيير لون النص عند الضغط على اللينك
                       className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 active:text-pink-800 font-semibold text-sm transition-colors group"
                     >
-                      <span>اقرأ المقال كاملاً</span>
                       <span className="group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform">←</span>
+                      <span >اقرأ المقال كاملاً</span>
                     </a>
                   </div>
                 </div>

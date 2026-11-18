@@ -3,7 +3,7 @@ import React from 'react';
 export default function ProductGrid({ products }) {
   if (products.length === 0) {
     return (
-      <div className="flex-1 bg-white rounded-2xl border border-slate-100 p-12 text-center">
+      <div className="flex-1 bg-white  rounded-2xl border border-slate-100 p-12 text-center">
         <div className="text-5xl mb-4">🔍</div>
         <h3 className="text-lg font-bold text-slate-800 mb-2">لا توجد منتجات تطابق الفلاتر</h3>
         <p className="text-xs text-slate-500">جرب تغيير خيارات البحث أو إعادة ضبط الفلترة لعرض نتائج أكثر.</p>

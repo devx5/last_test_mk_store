@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section  className=" bg-gradient-to-b from-[#659287] to-[#CFECF3] px-4 py-10 sm:px-6 lg:px-8" dir="rtl z-10" >
+    <section  className=" bg-gradient-to-b from-[#CFECF3] to-[#659287] px-4 py-10 sm:px-6 lg:px-8" dir="rtl z-10" >
       <div className="bg-white/30 p-10 rounded-2xl shadow-lg">
       
         {/* عنوان السيكشن */}

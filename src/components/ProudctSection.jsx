@@ -32,12 +32,14 @@ const ProductsSection = () => {
 
   if (loading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="px-4 py-8 bg-gradient-to-b from-[#CFECF3] to-[#659287]" dir="rtl  ">
+        <h2 className="text-2xl py-8 text-center font-bold text-gray-800 mb-8">منتجات التجميل والعناية</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto ">
+          
           {[...Array(6)].map((_, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
+              className="bg-white/40 rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
             >
               <div>
                 <div className="mb-4">
@@ -64,12 +66,13 @@ const ProductsSection = () => {
             </div>
           ))}
         </div>
+        
       </div>
     );
   }
 
   return (
-    <section className="py-3 px-4 md:px-8  mx-auto  bg-gradient-to-b from-[#659287] to-[#CFECF3]" >
+    <section className="py-3 px-4 md:px-8  mx-auto  bg-gradient-to-b from-[#CFECF3] to-[#659287]" >
       <div className="bg-white/30 p-10 rounded-2xl shadow-md max-w-7xl mx-auto">
       <h2 className="text-2xl py-8 text-center font-bold text-gray-800 mb-8">منتجات التجميل والعناية</h2>
 

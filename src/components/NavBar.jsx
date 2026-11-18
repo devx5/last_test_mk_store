@@ -117,7 +117,7 @@ export default function Navbar() {
 
   return (
     <div lang='ar' dir='rtl' className={`w-full bg-gray-100 font-['Cairo',sans-serif] sticky top-0 z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0 ' : '-translate-y-full'}`}>
-      1. Top Announcement Bar
+    
       <div className="bg-[#1f2937] w-full text-gray-300 text-xs py-2 px-4 text-center mt-[69px] md:mt-[89px]">
         <div className="w-full flex justify-center items-center gap-2">
           <span>اتصل بنا - مكه لمستلزمات ومستحضرات التجميل بسعر الجملة</span>

@@ -6,7 +6,7 @@ export default function ProductCard({ product, rating, isAdded, onRate, onAddToC
     <div>
          <div 
                   key={product.id} 
-                  className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl active:shadow-md transition-all duration-300 hover:-translate-y-1.5 active:translate-y-0"
+                  className="bg-white/80 rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between hover:shadow-xl active:shadow-md transition-all duration-300 hover:-translate-y-1.5 active:translate-y-0"
                 >
                   <div>
                     <div className="overflow-hidden relative">

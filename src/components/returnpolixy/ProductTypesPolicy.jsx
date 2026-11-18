@@ -3,7 +3,7 @@ import { PackageX, ShieldCheck, AlertTriangle, CheckCircle2 } from 'lucide-react
 
 export default function ProductTypesPolicy() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-4">
       {/* المنتجات المستوردة */}
       <div className="bg-rose-50/50 border border-rose-200 rounded-2xl p-6">
         <div className="flex items-center gap-3 mb-4">
@@ -15,7 +15,7 @@ export default function ProductTypesPolicy() {
         <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
           جميع المنتجات المستوردة (مثل: <span className="font-semibold text-rose-700">روز ريري، آرت سكين، أولي بولا، 3Q، كاريت، كيس بيوتي</span> وغيرها) <span className="font-bold underline text-rose-600">لا تخضع للاستبدال أو الاسترجاع</span> طالما تم تسليمها للعميل بحالة سليمة وخالية من أي تلف أو عيوب ظاهرة.
         </p>
-        <div className="flex items-start gap-2 bg-rose-100/70 p-3 rounded-xl border border-rose-300 text-rose-800 text-sm">
+        <div className="flex items-start gap-2 bg-rose-100/70 p-3 rounded-xl border border-rose-300 text-rose-800 text-sm " style={{marginTop:"2rem"}}>
           <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
           <span>لذلك نرجو التأكد من الأصناف والكميات وحالة المنتجات عند الاستلام مباشرة.</span>
         </div>
@@ -32,7 +32,7 @@ export default function ProductTypesPolicy() {
         <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
           بالنسبة لمنتجات الشركات المصرية (مثل: <span className="font-semibold text-blue-800">مايت سينما، ساندرا، جولد بيوتي، روز جولد</span> وغيرها)، يتم قبول المرتجع <span className="font-bold text-blue-700">فقط في حالة وجود عيب تصنيع فعلي</span>.
         </p>
-        <div className="space-y-2 bg-white p-4 rounded-xl border border-blue-100 text-sm">
+        <div className="space-y-2 bg-white p-4 rounded-xl border border-blue-100 text-sm" style={{marginTop:"2rem"}}>
           <p className="font-semibold text-gray-800 flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-blue-600" />
             عند اكتشاف عيب تصنيع يرجى:

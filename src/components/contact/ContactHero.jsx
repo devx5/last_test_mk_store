@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ContactHero() {
   return (
-    <section className="py-12 bg-slate-50 relative overflow-hidden text-center">
+    <section className="py-12 bg-gradient-to-b from-[#659287] to-[#CFECF3] relative overflow-hidden text-center">
       <div className="container mx-auto px-4 relative z-10">
         <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-700 text-xs font-bold mb-3">
           نحن هنا لمساعدتكِ 💬

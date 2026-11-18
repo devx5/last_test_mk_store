@@ -13,7 +13,7 @@ export default function FilterDrawer({ isOpen, onClose, filters, setFilters, onR
       ></div>
 
       {/* القائمة المنزلقة */}
-      <div className="relative w-4/5 max-w-xs bg-white h-full shadow-2xl p-4 overflow-y-auto z-10 mr-auto text-right">
+      <div className="relative w-4/5 max-w-xs bg-white/40 h-full shadow-2xl p-4 overflow-y-auto z-10 mr-auto text-right">
         <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
           <span className="font-extrabold text-slate-800 text-sm">تصفية المنتجات</span>
           <button

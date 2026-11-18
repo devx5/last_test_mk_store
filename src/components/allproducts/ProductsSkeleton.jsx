@@ -5,13 +5,13 @@ import 'react-loading-skeleton/dist/skeleton.css';
 export default function ProductsSkeleton() {
   return (
   <div>
-      <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
+      <div className=" px-4 py-8 bg-gradient-to-b from-[#659287] to-[#CFECF3]" dir="rtl">
                {/* شيبه سيكشن الأقسام والـ Header عشان الصفحة متهتزش */}
-               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+               <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                  {[...Array(6)].map((_, index) => (
                    <div 
                      key={index} 
-                     className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
+                     className="bg-white/40 rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between p-4"
                    >
                      <div>
                        {/* مكان صورة الكارد */}

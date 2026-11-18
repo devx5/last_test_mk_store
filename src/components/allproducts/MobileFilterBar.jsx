@@ -5,7 +5,7 @@ export default function MobileFilterBar({ productCount, onOpenDrawer }) {
   return (
     <div>
        {/* زر فتح الفلترة للموبايل والتابلت */}
-          <div className="lg:hidden mb-6 flex justify-between items-center bg-white p-4 rounded-2xl border border-gray-100 shadow-sm" style={{ marginBottom: '2rem' }}>
+          <div className="lg:hidden mb-6 flex justify-between items-center bg-white/50 p-4 rounded-2xl border border-gray-100 shadow-sm" style={{ marginBottom: '2rem' }}>
             <span className="text-sm font-bold text-gray-700">
               المنتجات المتاحة ({productCount})
             </span>

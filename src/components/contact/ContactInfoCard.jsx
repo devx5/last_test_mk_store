@@ -65,9 +65,9 @@ const contactMethods = [
 
 export default function ContactInfoCards() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-gradient-to-b from-[#CFECF3] to-[#659287]">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto shadow-lg rounded-3xl p-6 bg-white/30 border border-gray-200">
           {contactMethods.map((item) => (
             <div
               key={item.id}

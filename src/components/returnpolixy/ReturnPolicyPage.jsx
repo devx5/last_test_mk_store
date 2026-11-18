@@ -5,8 +5,8 @@ import RejectedCases from './RejectedCases.jsx';
 import TimeFrames from './TimeFrames.jsx';
 export default function ReturnPolicyPage() {
   return (
-    <div className="bg-gray-50 min-h-screen py-10 px-4 md:px-8 text-right" dir="rtl">
-      <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-md p-6 md:p-10 border border-gray-100 space-y-10">
+    <div className="bg-gradient-to-b from-[#659287] to-[#CFECF3] min-h-screen py-10 px-4 md:px-8 text-right " dir="rtl">
+      <div className="max-w-5xl mx-auto bg-white/60 rounded-3xl shadow-md p-6 md:p-10 border border-gray-100 space-y-10">
         <PolicyHeader />
         <ProductTypesPolicy />
         <RejectedCases />

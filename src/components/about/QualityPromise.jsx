@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function QualityPromise() {
   return (
-    <section className="py-16 bg-slate-50">
+    <section className="py-16 bg-gradient-to-b from-[#659287] to-[#CFECF3]">
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 text-center space-y-6">
+        <div className="bg-white/40 rounded-3xl p-8 sm:p-12 shadow-sm  text-center space-y-6">
           <div className="w-16 h-16 mx-auto rounded-full bg-pink-50 flex items-center justify-center text-3xl">
             📦
           </div>

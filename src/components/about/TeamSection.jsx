@@ -8,7 +8,7 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-16 bg-white border-t border-slate-100">
+    <section className="py-16 bg-gradient-to-b from-[#CFECF3] to-[#101426]  ">
       <div className="container mx-auto px-4">
         {/* Title */}
         <div className="text-center max-w-xl mx-auto mb-12">
