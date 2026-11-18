@@ -72,7 +72,7 @@ const ProductsSection = () => {
   }
 
   return (
-    <section className="py-3 px-4 md:px-8  mx-auto  bg-gradient-to-b from-[#CFECF3] to-[#659287]" >
+    <section className="py-1 px-4 md:px-8  mx-auto  bg-gradient-to-b from-[#CFECF3] to-[#659287]" >
       <div className="bg-white/30 p-10 rounded-2xl shadow-md max-w-7xl mx-auto">
       <h2 className="text-2xl py-8 text-center font-bold text-gray-800 mb-8">منتجات التجميل والعناية</h2>
 

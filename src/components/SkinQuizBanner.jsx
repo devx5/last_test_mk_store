@@ -12,17 +12,17 @@ export default function SkinQuizBanner() {
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
             {/* الشارة العلوية */}
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs sm:text-sm font-semibold mb-4 border border-white/30 " style={{marginBottom: "9px"}}>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs sm:text-sm font-semibold mb-4 border border-white/30 animate-bounce text-black" style={{marginBottom: "9px"}}>
               ✨ مستشار التجميل الذكي
             </span>
 
             {/* العنوان الرئيسي */}
-            <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 leading-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 leading-tight text-black">
               مُحتارة في اختيار الروتين المناسب لبشرتك؟
             </h2>
 
             {/* الوصف */}
-            <p className="text-pink-100 text-sm sm:text-base mb-8 leading-relaxed" style={{marginTop: "9px" , marginBottom:"9px"}}>
+            <p className="text-black text-sm sm:text-base mb-8 leading-relaxed " style={{marginTop: "9px" , marginBottom:"9px"}}>
               أجيبي عن 4 أسئلة بسيطة خلال دقيقة واحدة، وسنقوم بتحليل احتياج بشرتك وترشيح المنتجات المثالية لكِ بدقة.
             </p>
 
