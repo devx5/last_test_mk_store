@@ -87,20 +87,20 @@ const ProductsSection = () => {
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md active:shadow-md transition-all duration-300 flex flex-col justify-between group"
             >
               {/* صورة المنتج */}
-              <div className="overflow-hidden relative bg-gray-50 h-52">
+              <Link to={`/product/${product.id}`} title="details" className="overflow-hidden relative bg-gray-50 h-52">
                 <img
                   src={product.thumbnail}
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-500"
                 />
-              </div>
+              </Link>
 
               {/* تفاصيل المنتج */}
               <div className="p-4 flex-1 flex flex-col justify-between ">
-                <div>
+                <Link to={`/product/${product.id}`} title="details" className="flex-1">
                   <h3 className="font-bold text-gray-800 text-lg mb-1">{product.title}</h3>
                   <p className="text-gray-500 text-sm line-clamp-2 mb-4">{product.description}</p>
-                </div>
+                </Link>
 
                 {/* السعر */}
                 <div className="flex items-center justify-between mt-2">

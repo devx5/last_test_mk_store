@@ -15,7 +15,7 @@ const countries = [
         
         {/* زر العودة للأعلى Back to Top */}
         <div className="flex justify-center pb-6">
-         <a href="">اعطي انطباعك عن الموقع</a>
+         <Link to={`/rate`} >اعطي انطباعك عن الموقع</Link>
         </div>
 
         {/* الشريط العلوي الخمس عناصر (Top Features Bar) */}

@@ -29,6 +29,8 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 // import OffersSection from './components/OffersSesction.jsx';
 import Login from './components/auth/LogIn.jsx';
 import Register from './components/auth/regester.jsx';
+import ProductDetails from './components/details/ProductDetails.jsx';
+import RatePage from '../src/components/rate/RatePage.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -94,6 +96,8 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/rate" element={<RatePage/>} />
         </Routes>
 
       </div>
